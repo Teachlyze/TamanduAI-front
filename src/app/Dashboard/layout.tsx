@@ -1,6 +1,4 @@
 import type { Metadata } from 'next';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
 import Main from '@/components/layout/Main';
 import React from 'react';
 import '../globals.css';
