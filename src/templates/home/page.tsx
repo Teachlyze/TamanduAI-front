@@ -160,7 +160,7 @@ export default function HomePageTemplate() {
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {['Básico', 'Pro', 'Empresarial'].map((plan, index) => (
+          {['Básico', 'Pro', 'Empresarial'].map((plan) => (
             <Card
               key={plan}
               className="

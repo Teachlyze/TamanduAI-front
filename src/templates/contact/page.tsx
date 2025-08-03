@@ -1,5 +1,3 @@
-import Main from '@/components/layout/Main';
-
 export default function ContactPageTemplate() {
   return (
     <section className="p-4 max-w-2xl mx-auto bg-blue-100 rounded-lg shadow-md mt-12">
