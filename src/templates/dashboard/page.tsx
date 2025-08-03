@@ -1,5 +1,4 @@
 'use client';
-
 import { Button } from '@/components/ui/button';
 
 export default function DashboardTemplate() {
@@ -9,7 +8,7 @@ export default function DashboardTemplate() {
         <h1 className="text-2xl bg-white p-4">Turmas</h1>
         <div className="p-4">
           <h2 className="text-xl">Suas Turmas</h2>
-          <ul className="flex w-full items-center justify-between bg-white border-b border-gray-500 px-4 py-1 mt-4">
+          <ul className="flex w-full items-center justify-between bg-white border-b border-gray-500 px-2 rounded-lg mt-4">
             <div className="flex gap-4">
               <li className="">
                 <button className="hover:text-black text-black hover:underline cursor-pointer">
@@ -40,7 +39,7 @@ export default function DashboardTemplate() {
               </li>
             </div>
           </ul>
-          <table className="flex flex-col bg-white border-white w-full">
+          <table className="flex flex-col bg-white border-white w-full p-2 rounded-lg">
             <thead className="flex w-full items-center justify-between bg-gray-100 px-4 py-2">
               <tr className="flex w-full items-center justify-between">
                 <th className="w-1/4 text-start">Turma</th>

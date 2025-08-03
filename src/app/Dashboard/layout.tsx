@@ -19,11 +19,11 @@ export default function RootLayout({
   return (
     <div className="flex max-sm:flex-col min-h-screen">
       <header className="sm:max-w-[80px] w-full bg-blue-600 text-white max-sm:shadow-md">
-        <nav className="w-full flex flex-col items-center gap-12 bg-black h-full p-4">
-          <Link href={'/'} className="bg-blue-400 text-white p-2 rounded-lg mb-14">
+        <nav className="w-full flex items-center md:flex-col bg-black p-4 h-full">
+          <Link href={'/'} className="max-sm:mr-auto bg-blue-400 text-white p-2 rounded-lg md:mb-14">
             Opção
           </Link>
-          <div className='w-full flex flex-col gap-12'>
+          <div className="flex md:flex-col gap-12">
             <Link href={'/'}>Opção</Link>
             <Link href={'/'}>Opção</Link>
             <Link href={'/'}>Opção</Link>
@@ -31,7 +31,12 @@ export default function RootLayout({
           </div>
         </nav>
       </header>
-      <Main>{children}</Main>
+      <Main
+        props="flex flex-col items-center justify-center 
+    min-h-screen bg-blue-200 w-full"
+      >
+        {children}
+      </Main>
     </div>
   );
 }

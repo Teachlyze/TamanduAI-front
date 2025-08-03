@@ -1,11 +1,13 @@
-export default function Main({children}: Readonly<{
-    children: React.ReactNode;
+export default function Main({
+  children,
+  props,
+}: Readonly<{
+  children: React.ReactNode;
+  props?: string;
 }>) {
-    return (
-        <main className="flex flex-col items-center justify-center min-h-screen bg-blue-200 w-full">
-            <div className="w-full">
-                {children}
-            </div>
-        </main>
-    );
+  return (
+    <main className={props}>
+      <div className="w-full">{children}</div>
+    </main>
+  );
 }
