@@ -9,7 +9,7 @@ export default function Header() {
   const router = useRouter();
 
   return (
-    <header className="flex justify-between items-center p-4 shadow-md bg-white">
+    <header className="flex justify-between items-center p-4 bg-slate-100">
       <h1 className="text-3xl font-bold text-black cursor-pointer" onClick={() => router.push('/')}>
         TamanduAI
       </h1>
@@ -27,7 +27,10 @@ export default function Header() {
               }
             }}
           >
-            <SelectTrigger className="max-w-40 bg-white border-2 border-blue-500" defaultValue="none">
+            <SelectTrigger
+              className="max-w-40 bg-white border-2 border-blue-500"
+              defaultValue="none"
+            >
               <SelectValue placeholder="Páginas" />
             </SelectTrigger>
             <SelectContent className="bg-white">
@@ -41,23 +44,26 @@ export default function Header() {
               href="/Profile"
               className="bg-white border-2 rounded-full border-black font-medium flex p-2 items-center gap-1"
             >
-              <UserIcon strokeWidth={2}/>
+              <UserIcon strokeWidth={2} />
             </Link>
           </div>
         </div>
         <div className="hidden md:flex items-center gap-6 text-black">
-          <Link href="/Sobre" className="hover:text-green-700 font-medium flex items-center gap-2">
+          <Link
+            href="/Sobre"
+            className="shadow-md rounded-xl p-2 hover:bg-green-300 transition-all ease-in-out border border-gray-400 font-medium flex items-center gap-2"
+          >
             <Info size={16} /> Sobre nós
           </Link>
           <Link
             href="/Contato"
-            className="hover:text-green-700 font-medium flex items-center gap-2"
+            className="shadow-md rounded-xl p-2 hover:bg-green-300 transition-all ease-in-out border border-gray-400 font-medium flex items-center gap-2"
           >
             <Phone size={16} /> Contato
           </Link>
           <Link
             href="/Dashboard"
-            className="hover:text-green-700 font-medium flex items-center gap-2"
+            className="shadow-md rounded-xl p-2 hover:bg-green-300 transition-all ease-in-out border border-gray-400 font-medium flex items-center gap-2"
           >
             <LayoutDashboard size={16} /> Dashboard
           </Link>
