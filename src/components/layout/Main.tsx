@@ -5,9 +5,9 @@ export default function Main({
   children: React.ReactNode;
   props?: string;
 }>) {
-  return (
-    <main className={props}>
-      <div className="w-full">{children}</div>
-    </main>
-  );
+  return <main className={props}>
+    <div className="w-full">
+      {children}
+    </div>
+  </main>;
 }

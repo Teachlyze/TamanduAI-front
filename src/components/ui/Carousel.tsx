@@ -41,17 +41,17 @@ export default function FeedbackCarousel({
           {[...feedbacks, ...feedbacks].map((f, idx) => (
             <div
               key={idx}
-              className="flex-none w-[90%] sm:w-[500px] bg-white shadow-lg shadow-black/30 rounded-xl p-6"
+              className="flex-none shrink-0 w-[90%] sm:w-[400px] sm:h-[160px] bg-gray-50 shadow-lg shadow-black/30 rounded-xl p-6"
             >
-              <div className="flex items-center justify-between border-b border-yellow-400 pb-2">
+              <div className="flex items-center justify-between border-b-2 border-yellow-400 pb-2">
                 <h4 className="text-lg font-semibold">{f.nome}</h4>
-                <div className="flex text-yellow-500 text-xl">
+                <div className="flex text-yellow-500 gap-1 text-shadow-lg text-shadow-yellow-800 text-xl">
                   {Array.from({ length: f.stars }).map((_, i) => (
                     <span key={i}>★</span>
                   ))}
                 </div>
               </div>
-              <p className="mt-2 text-gray-800">{f.feedback}</p>
+              <p className="mt-2 text-gray-800 font-medium">{f.feedback}</p>
             </div>
           ))}
         </div>
