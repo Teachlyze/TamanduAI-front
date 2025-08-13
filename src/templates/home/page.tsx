@@ -71,9 +71,9 @@ export default function HomePageTemplate() {
   ];
   return (
     <section className="mx-auto min-h-screen bg-blue-900">
-      <section className="flex items-center min-h-screen justify-center mx-auto bg-gradient-to-t from-blue-900 via-blue-700 to-green-500 text-white">
+      <section className="flex items-center min-h-screen justify-center mx-auto bg-gradient-to-t from-blue-800 via-blue-600 to-slate-200 text-white">
         {/* Coluna da Esquerda: Texto */}
-        <div className="text-white max-w-lg max-md:text-center">
+        <div className="text-black max-w-lg max-md:text-center">
           <h2 className="md:text-4xl text-3xl font-bold mb-4 drop-shadow-lg">
             Sua gestão educacional com inteligência
           </h2>
@@ -102,9 +102,9 @@ export default function HomePageTemplate() {
           />
         </div>
       </section>
-      <section className="w-full flex flex-col items-end bg-blue-900 justify-center mx-auto px-4 py-12">
-        <div className="items-center max-w-2xl text-white space-y-4 rounded-lg">
-          <h2 className="text-3xl font-bold text-end drop-shadow-lg border-b-2 pb-4 border-yellow-400">
+      <section className="w-full flex flex-col items-end bg-blue-800 justify-center mx-auto px-4 py-12">
+        <div className="items-center max-w-2xl text-gray-800 shadow-2xl bg-slate-100 p-4 space-y-4 rounded-lg">
+          <h2 className="text-3xl font-bold text-end  border-b-2 pb-4 border-yellow-400">
             O que é a TamanduAI?
           </h2>
           <p className="text-xl text-justify drop-shadow-lg">
@@ -118,14 +118,14 @@ export default function HomePageTemplate() {
       <section
         style={{
           WebkitMaskImage:
-            'linear-gradient(to right, transparent, black 20%, black 60%, transparent)',
+            'linear-gradient(to right, transparent, black 20%, black 50%, transparent)',
           WebkitMaskRepeat: 'no-repeat',
           WebkitMaskSize: '100% 100%',
           maskImage: 'linear-gradient(to right, transparent, black 40%, black 40%, transparent)',
           maskRepeat: 'no-repeat',
           maskSize: '100% 100%',
         }}
-        className="rounded-xl py-6 bg-black/40"
+        className="rounded-xl py-12 bg-black/40"
       >
         <h2 className="text-2xl font-bold text-center text-white mb-6 drop-shadow-md">
           Avaliações dos Usuários
@@ -133,7 +133,7 @@ export default function HomePageTemplate() {
         <FeedbackCarousel feedbacks={usersFeedbacks} />
       </section>
       {/* Funcionalidades + Demo DESKTOP*/}
-      <section className="mt-12 py-12 hidden md:block bg-gradient-to-t from-yellow-700 to-blue-900 px-4">
+      <section className="py-12 hidden md:block bg-gradient-to-b from-blue-900 to-slate-300 px-4">
         <h3 className="text-3xl font-bold text-center text-white drop-shadow-md mb-12">
           Funcionalidades em Ação
         </h3>
@@ -260,10 +260,10 @@ export default function HomePageTemplate() {
         </ul>
       </section>
       {/* Planos */}
-      <section className="py-12 px-4 bg-gradient-to-b from-yellow-700 to-black text-white">
+      <section className="py-12 px-4 bg-gradient-to-t from-blue-800 to-slate-300 text-black">
         <div>
           <h2 className="text-2xl font-bold text-center mb-6">Planos para Todos os Perfis</h2>
-          <p className="text-center max-w-2xl mx-auto mb-6 md:text-xl">
+          <p className="text-center max-w-2xl mx-auto mb-6 font-medium md:text-xl">
             A <strong>TamanduAI</strong> oferece planos flexíveis, com um bom custo benefício, para
             atender desde usuários iniciantes até instituições completas. Escolha o plano ideal para
             você!
