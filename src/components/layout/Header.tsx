@@ -9,8 +9,8 @@ export default function Header() {
   const router = useRouter();
 
   return (
-    <header className="flex justify-between items-center p-4 bg-green-500">
-      <h1 className="text-3xl font-medium drop-shadow-2xl text-white cursor-pointer" onClick={() => router.push('/')}>
+    <header className="flex justify-between items-center p-4 bg-slate-200">
+      <h1 className="text-3xl font-medium drop-shadow-2xl text-black cursor-pointer" onClick={() => router.push('/')}>
         TamanduAI
       </h1>
       <nav className="space-x-6 flex">
@@ -48,25 +48,25 @@ export default function Header() {
             </Link>
           </div>
         </div>
-        <div className="hidden md:flex items-center gap-6 text-white">
+        <div className="hidden md:flex items-center gap-6 text-black">
           <Link
             href="/Sobre"
-            className="shadow-md rounded-xl p-2 hover:bg-white hover:text-black
-            transition-all ease-in-out border border-white font-medium flex items-center gap-2"
+            className="shadow-md rounded-xl p-2 hover:bg-yellow-400 hover:text-white
+            transition-all ease-in-out border border-gray-600 font-medium flex items-center gap-2"
           >
             <Info size={16} /> Sobre nós
           </Link>
           <Link
             href="/Contato"
-            className="shadow-md rounded-xl p-2 hover:bg-white hover:text-black
-            transition-all ease-in-out border border-white font-medium flex items-center gap-2"
+            className="shadow-md rounded-xl p-2 hover:bg-yellow-400 hover:text-white
+            transition-all ease-in-out border border-gray-600 font-medium flex items-center gap-2"
           >
             <Phone size={16} /> Contato
           </Link>
           <Link
             href="/Dashboard"
-            className="shadow-md rounded-xl p-2 hover:bg-white hover:text-black
-            transition-all ease-in-out border border-white font-medium flex items-center gap-2"
+            className="shadow-md rounded-xl p-2 hover:bg-yellow-400 hover:text-white
+            transition-all ease-in-out border border-gray-600 font-medium flex items-center gap-2"
           >
             <LayoutDashboard size={16} /> Dashboard
           </Link>
