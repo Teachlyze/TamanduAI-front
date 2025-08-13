@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import Image from 'next/image';
 import FeedbackCarousel from '@/components/ui/Carousel';
+import { AlarmClockPlus, BookHeadphones, BotMessageSquare, GraduationCap, Rocket } from 'lucide-react';
 
 export default function HomePageTemplate() {
   const usersFeedbacks = [
@@ -69,55 +70,76 @@ export default function HomePageTemplate() {
     },
   ];
   return (
-    <section className="min-h-screen bg-slate-100">
-      {/* Hero section */}
-      {/* Caso alterar o design colocar um px-4 para cada tag principal */}
-      <section className="relative flex items-center justify-center bg-gradient-to-b from-slate-100 to-green-400 gap-8 min-h-screen px-8">
+    <section className="mx-auto min-h-screen bg-blue-900">
+      <section className="flex items-center min-h-screen justify-center mx-auto bg-gradient-to-t from-blue-900 via-blue-700 to-green-500 text-white">
         {/* Coluna da Esquerda: Texto */}
-        <div className="text-black">
-          <h2 className="text-4xl font-bold mb-4">Sua gestão educacional com inteligência</h2>
-          <p className="text-2xl mb-6">
+        <div className="text-white max-w-lg max-md:text-center">
+          <h2 className="md:text-4xl text-3xl font-bold mb-4 drop-shadow-lg">
+            Sua gestão educacional com inteligência
+          </h2>
+          <p className="md:text-3xl text-2xl mb-6 drop-shadow-md">
             Transforme a experiência do ensino híbrido com automações inteligentes, tutoriais
             dinâmicos e controle total sobre seu ambiente virtual.
           </p>
-          <Button
-            className="
-            text-lg text-white px-4 py-3 
-            cursor-pointer 
-            bg-blue-700 
-            hover:bg-green-500 shadow-md
-            hover:text-slate-100
-            transition-all duration-300
-          "
+          <button
+            className="flex items-center gap-2 bg-yellow-500
+           hover:bg-yellow-600 text-black hover:text-white font-semibold 
+           px-4 py-2 rounded-lg cursor-pointer transition-colors duration-300
+           border border-white shadow-lg shadow-black/50"
           >
             Comece agora
-          </Button>
+            <GraduationCap size={28} height={28} width={28} />
+          </button>
         </div>
-
         {/* Coluna da Direita: Imagem */}
-        <div className="relative max-lg:hidden">
+        <div className="max-lg:hidden">
           <Image
             src="/logo.png"
             alt="TamanduAI-educacional"
-            className="w-full h-full"
-            width={500}
-            height={578}
-            // opcional, se quiser dar prioridade a essa imagem
+            className="w-full h-full drop-shadow-lg"
+            width={300}
+            height={300}
           />
         </div>
       </section>
-      <section className="py-6 bg-gradient-to-t from-blue-600 to-green-600">
-        <h2 className="text-2xl font-bold text-center text-white mb-6">
-          O que nossos usuários estão dizendo
+      <section className="w-full flex flex-col items-end bg-blue-900 justify-center mx-auto px-4 py-12">
+        <div className="items-center max-w-2xl text-white space-y-4 rounded-lg">
+          <h2 className="text-3xl font-bold text-end drop-shadow-lg border-b-2 pb-4 border-yellow-400">
+            O que é a TamanduAI?
+          </h2>
+          <p className="text-xl text-justify drop-shadow-lg">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex id reiciendis error. Animi
+            voluptate amet magnam similique assumenda adipisci facere, culpa nemo odio? dolor optio,
+            non officiis dolorem perferendis cumque, magnam laborum mollitia excepturi maxime
+            voluptatum, atque doloribus!
+          </p>
+        </div>
+      </section>
+      <section
+        style={{
+          WebkitMaskImage:
+            'linear-gradient(to right, transparent, black 20%, black 60%, transparent)',
+          WebkitMaskRepeat: 'no-repeat',
+          WebkitMaskSize: '100% 100%',
+          maskImage: 'linear-gradient(to right, transparent, black 40%, black 40%, transparent)',
+          maskRepeat: 'no-repeat',
+          maskSize: '100% 100%',
+        }}
+        className="rounded-xl py-6 bg-black/40"
+      >
+        <h2 className="text-2xl font-bold text-center text-white mb-6 drop-shadow-md">
+          Avaliações dos Usuários
         </h2>
         <FeedbackCarousel feedbacks={usersFeedbacks} />
       </section>
       {/* Funcionalidades + Demo DESKTOP*/}
-      <section className="py-12 hidden md:block bg-gradient-to-b from-blue-500 to-yellow-300 px-4">
-        <h3 className="text-3xl font-bold text-center mb-12">Funcionalidades em Ação</h3>
-        <div className="max-w-5xl mx-auto bg-slate-200 border p-6 rounded-xl shadow-xl">
+      <section className="mt-12 py-12 hidden md:block bg-gradient-to-t from-yellow-700 to-blue-900 px-4">
+        <h3 className="text-3xl font-bold text-center text-white drop-shadow-md mb-12">
+          Funcionalidades em Ação
+        </h3>
+        <div className="max-w-5xl mx-auto bg-slate-200 border p-6 rounded-xl shadow-lg shadow-black/60">
           <Tabs defaultValue="func1">
-            <TabsList className="justify-center gap-4 bg-gray-400 shadow-inner rounded-lg">
+            <TabsList className="justify-center gap-4 bg-gray-600/60 rounded-lg">
               <TabsTrigger value="func1" style={{ cursor: 'pointer' }}>
                 Cadastro de Aluno
               </TabsTrigger>
@@ -238,7 +260,7 @@ export default function HomePageTemplate() {
         </ul>
       </section>
       {/* Planos */}
-      <section className="py-12 px-4 bg-gradient-to-b from-yellow-300 to-black text-white">
+      <section className="py-12 px-4 bg-gradient-to-b from-yellow-700 to-black text-white">
         <div>
           <h2 className="text-2xl font-bold text-center mb-6">Planos para Todos os Perfis</h2>
           <p className="text-center max-w-2xl mx-auto mb-6 md:text-xl">
@@ -247,39 +269,64 @@ export default function HomePageTemplate() {
             você!
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl justify-items-center mx-auto">
           {['Básico', 'Pro', 'Empresarial'].map((plan) => (
             <Card
               key={plan}
-              className="
+              className={`
+            p-0
             rounded-2xl shadow-md 
-            border-2 border-yellow-500 
-            hover:shadow-lg bg-slate-200 hover:bg-blue-800 hover:text-white
-            transition-all duration-300"
+            border-2 border-yellow-300 min-h-[364px] min-w-[360px]
+            hover:shadow-lg bg-gradient-to-br from-black 
+            ${
+              plan === 'Empresarial'
+                ? 'to-yellow-600'
+                : plan === 'Básico'
+                  ? 'to-green-500'
+                  : 'to-blue-500'
+            }
+            hover:bg-blue-800 text-white
+            transition-all duration-300`}
             >
-              <CardContent className="flex flex-col p-6 ">
-                <h4 className="text-xl font-semibold mb-2">Plano {plan}</h4>
-                <p className="mb-4">
-                  Ideal para{' '}
-                  {plan === 'Básico'
-                    ? 'usuários iniciantes'
-                    : plan === 'Pro'
-                      ? 'pequenas equipes'
-                      : 'instituições completas'}
-                  .
-                </p>
-                <div className="mb-4 w-fit mx-auto text-center font-semibold space-y-6 border-4 p-4 border-blue-200 rounded-lg">
-                  <p>Lorem ipsum dolor sit.</p>
-                  <p>Lorem ipsum dolor sit.</p>
-                  <p>Lorem ipsum dolor sit.</p>
-                  <p>Lorem ipsum dolor sit.</p>
+              <CardContent className="flex flex-col justify-between items-center h-full py-4">
+                <div>
+                  <h4 className="text-xl text-center font-semibold">Plano {plan}</h4>
+                  <p className="text-center">
+                    Ideal para{' '}
+                    {plan === 'Básico'
+                      ? 'usuários iniciantes'
+                      : plan === 'Pro'
+                        ? 'pequenas equipes'
+                        : 'instituições completas'}
+                    .
+                  </p>
                 </div>
+                <ul
+                  className="flex flex-col justify-center 
+                  border-t-2 border-b-2 rounded-lg p-4 border-yellow-400
+                items-center font-medium text-center gap-10 m-1"
+                >
+                  <li className="flex items-center gap-2 text-lg font-medium">
+                    <BookHeadphones />
+                    <p className="drop-shadow-2xl">Lorem ipsum dolor sit.</p>
+                  </li>
+                  <li className="flex items-center gap-2 text-lg font-medium">
+                    <AlarmClockPlus />
+                    <p className="drop-shadow-2xl">Lorem ipsum dolor sit.</p>
+                  </li>
+                  <li className="flex items-center gap-2 text-lg font-medium">
+                    <BotMessageSquare />
+                    <p className="drop-shadow-2xl">Lorem ipsum dolor sit.</p>
+                  </li>
+                </ul>
                 <Button
                   className="
-                cursor-pointer w-fit hover:text-white mx-auto bg-yellow-400 hover:bg-yellow-600
+                  flex items-center
+                cursor-pointer w-fit hover:text-white mx-auto bg-yellow-500 hover:bg-yellow-600
                 text-black text-lg px-6 py-3 rounded-full
                 "
                 >
+                  <Rocket />
                   Assinar
                 </Button>
               </CardContent>

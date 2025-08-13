@@ -9,8 +9,8 @@ export default function Home() {
       <Header />
       <Main
         props="
-    flex flex-col items-center justify-center 
-    min-h-screen bg-blue-200 w-full"
+    flex flex-col items-center
+    min-h-screen bg-blue-200"
       >
         <HomePageTemplate />
       </Main>
