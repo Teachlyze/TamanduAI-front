@@ -4,7 +4,13 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import Image from 'next/image';
 import FeedbackCarousel from '@/components/ui/Carousel';
-import { AlarmClockPlus, BookHeadphones, BotMessageSquare, GraduationCap, Rocket } from 'lucide-react';
+import {
+  AlarmClockPlus,
+  BookHeadphones,
+  BotMessageSquare,
+  GraduationCap,
+  Rocket,
+} from 'lucide-react';
 
 export default function HomePageTemplate() {
   const usersFeedbacks = [
@@ -71,9 +77,9 @@ export default function HomePageTemplate() {
   ];
   return (
     <section className="mx-auto min-h-screen bg-blue-900">
-      <section className="flex items-center min-h-screen justify-center mx-auto bg-gradient-to-t from-blue-800 via-blue-600 to-slate-200 text-white">
+      <section className="flex items-center min-h-screen justify-center mx-auto bg-slate-300 text-white">
         {/* Coluna da Esquerda: Texto */}
-        <div className="text-black max-w-lg max-md:text-center">
+        <div className="text-white bg-blue-800 p-4 rounded-2xl max-w-lg max-md:text-center">
           <h2 className="md:text-4xl text-3xl font-bold mb-4 drop-shadow-lg">
             Sua gestão educacional com inteligência
           </h2>
@@ -102,8 +108,8 @@ export default function HomePageTemplate() {
           />
         </div>
       </section>
-      <section className="w-full flex flex-col items-end bg-blue-800 justify-center mx-auto px-4 py-12">
-        <div className="items-center max-w-2xl text-gray-800 shadow-2xl bg-slate-100 p-4 space-y-4 rounded-lg">
+      <section className="w-full flex flex-col items-end bg-slate-300 justify-center mx-auto px-4 py-6">
+        <div className="items-center max-w-2xl text-white shadow-2xl bg-blue-800 p-4 space-y-4 rounded-lg">
           <h2 className="text-3xl font-bold text-end  border-b-2 pb-4 border-yellow-400">
             O que é a TamanduAI?
           </h2>
@@ -115,31 +121,20 @@ export default function HomePageTemplate() {
           </p>
         </div>
       </section>
-      <section
-        style={{
-          WebkitMaskImage:
-            'linear-gradient(to right, transparent, black 20%, black 50%, transparent)',
-          WebkitMaskRepeat: 'no-repeat',
-          WebkitMaskSize: '100% 100%',
-          maskImage: 'linear-gradient(to right, transparent, black 40%, black 40%, transparent)',
-          maskRepeat: 'no-repeat',
-          maskSize: '100% 100%',
-        }}
-        className="rounded-xl py-12 bg-black/40"
-      >
-        <h2 className="text-2xl font-bold text-center text-white mb-6 drop-shadow-md">
+      <section className="bg-blue-800 py-4">
+        <h2 className="text-3xl font-bold text-center text-white mb-2 drop-shadow-md">
           Avaliações dos Usuários
         </h2>
         <FeedbackCarousel feedbacks={usersFeedbacks} />
       </section>
       {/* Funcionalidades + Demo DESKTOP*/}
-      <section className="py-12 hidden md:block bg-gradient-to-b from-blue-900 to-slate-300 px-4">
-        <h3 className="text-3xl font-bold text-center text-white drop-shadow-md mb-12">
+      <section className="py-12 hidden md:block bg-slate-300 px-4">
+        <h3 className="text-3xl font-bold text-center text-black drop-shadow-md mb-12">
           Funcionalidades em Ação
         </h3>
-        <div className="max-w-5xl mx-auto bg-slate-200 border p-6 rounded-xl shadow-lg shadow-black/60">
+        <div className="max-w-5xl mx-auto bg-slate-300 border-2 border-blue-800 p-6 rounded-xl shadow-lg shadow-black/60">
           <Tabs defaultValue="func1">
-            <TabsList className="justify-center gap-4 bg-gray-600/60 rounded-lg">
+            <TabsList className="justify-center gap-4 bg-blue-700 rounded-lg">
               <TabsTrigger value="func1" style={{ cursor: 'pointer' }}>
                 Cadastro de Aluno
               </TabsTrigger>
@@ -260,7 +255,7 @@ export default function HomePageTemplate() {
         </ul>
       </section>
       {/* Planos */}
-      <section className="py-12 px-4 bg-gradient-to-t from-blue-800 to-slate-300 text-black">
+      <section className="py-12 px-4 bg-slate-300 text-black">
         <div>
           <h2 className="text-2xl font-bold text-center mb-6">Planos para Todos os Perfis</h2>
           <p className="text-center max-w-2xl mx-auto mb-6 font-medium md:text-xl">
@@ -269,29 +264,21 @@ export default function HomePageTemplate() {
             você!
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl justify-items-center mx-auto">
-          {['Básico', 'Pro', 'Empresarial'].map((plan) => (
+        <div className="grid md:grid-cols-1 gap-8 max-w-6xl justify-items-center mx-auto">
+          {['Básico'].map((plan) => (
             <Card
               key={plan}
               className={`
             p-0
             rounded-2xl shadow-md 
-            border-2 border-yellow-300 min-h-[364px] min-w-[360px]
-            hover:shadow-lg bg-gradient-to-br from-black 
-            ${
-              plan === 'Empresarial'
-                ? 'to-yellow-600'
-                : plan === 'Básico'
-                  ? 'to-green-500'
-                  : 'to-blue-500'
-            }
-            hover:bg-blue-800 text-white
-            transition-all duration-300`}
+            border-3 border-yellow-500 min-h-[364px] min-w-[360px]
+            hover:shadow-lg bg-slate-200
+           text-black transition-all duration-300`}
             >
-              <CardContent className="flex flex-col justify-between items-center h-full py-4">
-                <div>
-                  <h4 className="text-xl text-center font-semibold">Plano {plan}</h4>
-                  <p className="text-center">
+              <CardContent className="flex flex-col justify-between h-full py-4">
+                <div className="text-start">
+                  <h4 className="text-xl font-semibold">Plano {plan}</h4>
+                  <p>
                     Ideal para{' '}
                     {plan === 'Básico'
                       ? 'usuários iniciantes'
@@ -301,34 +288,39 @@ export default function HomePageTemplate() {
                     .
                   </p>
                 </div>
-                <ul
-                  className="flex flex-col justify-center 
-                  border-t-2 border-b-2 rounded-lg p-4 border-yellow-400
-                items-center font-medium text-center gap-10 m-1"
-                >
-                  <li className="flex items-center gap-2 text-lg font-medium">
-                    <BookHeadphones />
-                    <p className="drop-shadow-2xl">Lorem ipsum dolor sit.</p>
-                  </li>
-                  <li className="flex items-center gap-2 text-lg font-medium">
-                    <AlarmClockPlus />
-                    <p className="drop-shadow-2xl">Lorem ipsum dolor sit.</p>
-                  </li>
-                  <li className="flex items-center gap-2 text-lg font-medium">
-                    <BotMessageSquare />
-                    <p className="drop-shadow-2xl">Lorem ipsum dolor sit.</p>
-                  </li>
-                </ul>
-                <Button
-                  className="
+                <div className="text-center flex flex-col items-center gap-2 py-2">
+                  <Button
+                    className="
                   flex items-center
                 cursor-pointer w-fit hover:text-white mx-auto bg-yellow-500 hover:bg-yellow-600
                 text-black text-lg px-6 py-3 rounded-full
                 "
+                  >
+                    <Rocket />
+                    Assinar
+                  </Button>
+                  <h4 className="font-bold text-2xl">
+                    <span className="text-xl">12x</span> R$25,50
+                  </h4>
+                </div>
+                <p className="w-full text-start text-lg font-medium">Recursos principais:</p>
+                <ul
+                  className="flex flex-col justify-center 
+                items-center text-center gap-4 m-1"
                 >
-                  <Rocket />
-                  Assinar
-                </Button>
+                  <li className="flex items-center gap-2 text-lg">
+                    <BookHeadphones strokeWidth={1.6} />
+                    <p className="drop-shadow-2xl">Lorem ipsum dolor sit.</p>
+                  </li>
+                  <li className="flex items-center gap-2 text-lg">
+                    <AlarmClockPlus strokeWidth={1.6} />
+                    <p className="drop-shadow-2xl">Lorem ipsum dolor sit.</p>
+                  </li>
+                  <li className="flex items-center gap-2 text-lg">
+                    <BotMessageSquare strokeWidth={1.6} />
+                    <p className="drop-shadow-2xl">Lorem ipsum dolor sit.</p>
+                  </li>
+                </ul>
               </CardContent>
             </Card>
           ))}

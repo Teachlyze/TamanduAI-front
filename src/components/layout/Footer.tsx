@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="bg-blue-800 text-white p-4">
+        <footer className="bg-slate-300 text-black font-medium p-4">
             <div className="container mx-auto text-center">
                 <p className="text-sm">© {new Date().getFullYear()} TamanduAI. Todos os direitos reservados.</p>
                 <nav className="mt-2">
