@@ -10,7 +10,9 @@ import {
   BotMessageSquare,
   GraduationCap,
   Rocket,
+  Star,
 } from 'lucide-react';
+import Link from 'next/link';
 
 export default function HomePageTemplate() {
   const usersFeedbacks = [
@@ -77,27 +79,38 @@ export default function HomePageTemplate() {
   ];
   return (
     <section className="mx-auto min-h-screen bg-blue-900">
-      <section className="flex items-center min-h-screen justify-center mx-auto bg-slate-300 text-white">
-        {/* Coluna da Esquerda: Texto */}
-        <div className="text-white bg-blue-800 p-4 rounded-2xl max-w-lg max-md:text-center">
-          <h2 className="md:text-4xl text-3xl font-bold mb-4 drop-shadow-lg">
-            Sua gestão educacional com inteligência
-          </h2>
-          <p className="md:text-3xl text-2xl mb-6 drop-shadow-md">
-            Transforme a experiência do ensino híbrido com automações inteligentes, tutoriais
-            dinâmicos e controle total sobre seu ambiente virtual.
-          </p>
-          <button
-            className="flex items-center gap-2 bg-yellow-500
-           hover:bg-yellow-600 text-black hover:text-white font-semibold 
-           px-4 py-2 rounded-lg cursor-pointer transition-colors duration-300
-           border border-white shadow-lg shadow-black/50"
+      <section
+        className="flex items-center min-h-screen justify-center
+       mx-auto bg-gradient-to-r from-blue-400 via-blue-800 to-blue-400 text-white"
+      >
+        <div className="flex flex-col justify-center max-md:items-center max-w-xl gap-4">
+          <h2
+            className="flex gap-2 border border-yellow-400 bg-yellow-400 font-medium
+           p-1 px-2 rounded-full w-fit text-white uppercase shadow-md shadow-yellow-400/50"
           >
-            Comece agora
-            <GraduationCap size={28} height={28} width={28} />
-          </button>
+            <Star fill="white" className="p-0.6" />
+            Faça parte da inovação da educação piauiense!
+          </h2>
+          <div className="flex flex-col max-md:items-center text-white rounded-2xl space-y-2 w-full max-md:text-center">
+            <h1 className="p-1 md:text-5xl text-2xl font-bold mb-1 drop-shadow-lg">
+              Sua gestão educacional com inteligência
+            </h1>
+            <p className="md:text-3xl text-2xl mb-6 drop-shadow-md">
+              Transforme a experiência do ensino híbrido com automações inteligentes, tutoriais
+              dinâmicos e controle total sobre seu ambiente virtual.
+            </p>
+            <Link
+              href={'/auth/login'}
+              className="flex items-center gap-2 bg-yellow-400 w-fit
+           hover:bg-yellow-600 text-white hover:text-white font-semibold 
+           px-4 py-2 rounded-lg cursor-pointer transition-colors duration-300
+           border border-white shadow-lg shadow-black/50 uppercase"
+            >
+              Comece agora
+              <GraduationCap size={28} height={28} width={28} />
+            </Link>
+          </div>
         </div>
-        {/* Coluna da Direita: Imagem */}
         <div className="max-lg:hidden">
           <Image
             src="/logo.png"
@@ -108,33 +121,79 @@ export default function HomePageTemplate() {
           />
         </div>
       </section>
-      <section className="w-full flex flex-col items-end bg-slate-300 justify-center mx-auto px-4 py-6">
-        <div className="items-center max-w-2xl text-white shadow-2xl bg-blue-800 p-4 space-y-4 rounded-lg">
-          <h2 className="text-3xl font-bold text-end  border-b-2 pb-4 border-yellow-400">
-            O que é a TamanduAI?
-          </h2>
-          <p className="text-xl text-justify drop-shadow-lg">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex id reiciendis error. Animi
-            voluptate amet magnam similique assumenda adipisci facere, culpa nemo odio? dolor optio,
-            non officiis dolorem perferendis cumque, magnam laborum mollitia excepturi maxime
-            voluptatum, atque doloribus!
+
+      <section className="py-6 min-h-screen w-full flex flex-col max-md:gap-6 items-end bg-slate-200 justify-center mx-auto px-4">
+        <div className="flex md:flex-row-reverse flex-col-reverse  gap-6 items-center justify-center max-w-5xl mx-auto">
+          <p className="font-medium">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum placeat, dolor ab
+            molestiae laudantium dicta repudiandae molestias nostrum tempore.
           </p>
+          <div
+            className={`max-w-[300px] relative after:content-[''] after:top-[-4] after:left-1 after:z-[-10] 
+            z-100 md:after:w-[101%] after:w-[100%] after:h-[100%] md:after:h-[104%] after:rotate-4 after:p-4
+            after:absolute after:bg-blue-500 after:rounded-md`}
+          >
+            <Image height={400} width={400} alt="foto" className="rounded-md" src="/homer_f.gif" />
+          </div>
+        </div>
+        <div className="flex md:flex-row flex-col-reverse gap-6 items-center justify-center max-w-5xl mx-auto">
+          <p className="font-medium">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum placeat, dolor ab
+            molestiae laudantium dicta repudiandae molestias nostrum tempore.
+          </p>
+          <div
+            className={`max-w-[300px] relative after:content-[''] after:top-[-4] after:left-1 after:z-[-10] 
+            z-100 md:after:w-[101%] after:w-[100%] after:h-[100%] md:after:h-[104%] after:rotate-4 after:p-4
+            after:absolute after:bg-blue-500 after:rounded-md`}
+          >
+            <Image height={400} width={400} alt="foto" className="rounded-md" src="/homer_f.gif" />
+          </div>
+        </div>
+        <div className="flex md:flex-row-reverse flex-col-reverse gap-6 items-center justify-center max-w-5xl mx-auto">
+          <p className="font-medium">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum placeat, dolor ab
+            molestiae laudantium dicta repudiandae molestias nostrum tempore.
+          </p>
+          <div
+            className={`max-w-[300px] relative after:content-[''] after:top-[-4] after:left-1 after:z-[-10] 
+            z-100 md:after:w-[101%] after:w-[100%] after:h-[100%] md:after:h-[104%] after:rotate-4 after:p-4
+            after:absolute after:bg-blue-500 after:rounded-md`}
+          >
+            <Image height={400} width={400} alt="foto" className="rounded-md" src="/homer_f.gif" />
+          </div>
+        </div>
+        <div className="flex md:flex-row flex-col-reverse gap-6 items-center justify-center max-w-5xl mx-auto">
+          <p className="font-medium">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum placeat, dolor ab
+            molestiae laudantium dicta repudiandae molestias nostrum tempore.
+          </p>
+          <div
+            className={`max-w-[300px] relative after:content-[''] after:top-[-4] after:left-1 after:z-[-10] 
+            z-100 md:after:w-[101%] after:w-[100%] after:h-[100%] md:after:h-[104%] after:rotate-4 after:p-4
+            after:absolute after:bg-blue-500 after:rounded-md`}
+          >
+            <Image height={400} width={400} alt="foto" className="rounded-md" src="/homer_f.gif" />
+          </div>
         </div>
       </section>
-      <section className="bg-blue-800 py-4">
-        <h2 className="text-3xl font-bold text-center text-white mb-2 drop-shadow-md">
-          Avaliações dos Usuários
-        </h2>
+
+      <section className="flex flex-col justify-center gap-18 bg-gradient-to-r from-blue-400 via-blue-800 to-blue-400 h-screen">
+        <div>
+          <h2 className="text-3xl font-medium text-center text-white drop-shadow-md mb-6">
+            O que dizem nossos <strong className="text-yellow-400">professores</strong>
+          </h2>
+          <i></i>
+        </div>
         <FeedbackCarousel feedbacks={usersFeedbacks} />
       </section>
       {/* Funcionalidades + Demo DESKTOP*/}
-      <section className="py-12 hidden md:block bg-slate-300 px-4">
-        <h3 className="text-3xl font-bold text-center text-black drop-shadow-md mb-12">
-          Funcionalidades em Ação
+      <section className="min-h-screen hidden md:block bg-slate-200 px-4 py-6">
+        <h3 className="text-3xl font-bold text-center drop-shadow-md mb-12">
+          Funcionalidades Exclusivas
         </h3>
-        <div className="max-w-5xl mx-auto bg-slate-300 border-2 border-blue-800 p-6 rounded-xl shadow-lg shadow-black/60">
+        <div className="max-w-5xl mx-auto bg-blue-500 p-6 rounded-xl shadow-lg shadow-black/60 text-white">
           <Tabs defaultValue="func1">
-            <TabsList className="justify-center gap-4 bg-blue-700 rounded-lg">
+            <TabsList className="justify-center gap-4 bg-yellow-400 rounded-lg">
               <TabsTrigger value="func1" style={{ cursor: 'pointer' }}>
                 Cadastro de Aluno
               </TabsTrigger>
@@ -149,12 +208,14 @@ export default function HomePageTemplate() {
             <TabsContent value="func1" className="mt-6 text-xl">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h4 className="font-semibold mb-2">Cadastro simplificado de alunos</h4>
+                  <h4 className="text-xl font-medium drop-shadow-lg mb-2">
+                    Cadastro simplificado de alunos
+                  </h4>
                   <p>Adicione alunos com poucos cliques, de forma rápida e sem complicações.</p>
                 </div>
-                <div className="rounded-xl overflow-hidden shadow-md border border-gray-600 shadow-gray-600 ">
+                <div className="rounded-xl overflow-hidden">
                   {/* Substitua a tag abaixo por um componente de vídeo, gif ou imagem animada */}
-                  <div className="w-full aspect-video bg-black flex items-center justify-center text-white">
+                  <div className="w-full aspect-video flex items-center justify-center">
                     <img
                       src="/homer_f.gif"
                       alt="TamanduAI-educacional"
@@ -168,11 +229,11 @@ export default function HomePageTemplate() {
             <TabsContent value="func2" className="mt-6 text-xl">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h4 className="text-xl font-semibold mb-2">Relatórios detalhados</h4>
+                  <h4 className="text-xl font-medium drop-shadow-lg mb-2">Relatórios detalhados</h4>
                   <p>Visualize relatórios completos com desempenho, frequência e mais.</p>
                 </div>
-                <div className="rounded-xl overflow-hidden shadow-md border border-gray-600 shadow-gray-600 ">
-                  <div className="w-full aspect-video bg-black flex items-center justify-center text-white ">
+                <div className="rounded-xl overflow-hidden">
+                  <div className="w-full aspect-video flex items-center justify-center ">
                     <img
                       src="/homer_f.gif"
                       alt="TamanduAI-educacional"
@@ -186,11 +247,11 @@ export default function HomePageTemplate() {
             <TabsContent value="func3" className="mt-6 text-xl">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h4 className="text-xl font-semibold mb-2">Notas automatizadas</h4>
+                  <h4 className="text-xl font-medium drop-shadow-lg mb-2">Notas automatizadas</h4>
                   <p>Notas lançadas automaticamente com integração aos sistemas acadêmicos.</p>
                 </div>
-                <div className="rounded-xl overflow-hidden shadow-md border border-gray-600 shadow-gray-600 ">
-                  <div className="w-full aspect-video bg-black flex items-center justify-center text-white">
+                <div className="rounded-xl overflow-hidden">
+                  <div className="w-full aspect-video flex items-center justify-center">
                     <img
                       src="/homer_f.gif"
                       alt="TamanduAI-educacional"
@@ -203,8 +264,7 @@ export default function HomePageTemplate() {
           </Tabs>
         </div>
       </section>
-      {/* Funcionalidades + Demo MOBILE */}
-      <section className="hidden max-md:block py-12 bg-green-500 px-6 text-white  ">
+      <section className="hidden max-md:block bg-green-500 px-6 text-white  ">
         <h3 className="text-2xl font-bold text-center mb-12">Funcionalidades</h3>
         <ul className="space-y-6">
           <li className="max-w-[360px] h-full flex flex-col items-center justify-center mx-auto">
@@ -254,8 +314,7 @@ export default function HomePageTemplate() {
           </li>
         </ul>
       </section>
-      {/* Planos */}
-      <section className="py-12 px-4 bg-slate-300 text-black">
+      <section className="px-4 bg-slate-200 text-black py-6">
         <div>
           <h2 className="text-2xl font-bold text-center mb-6">Planos para Todos os Perfis</h2>
           <p className="text-center max-w-2xl mx-auto mb-6 font-medium md:text-xl">

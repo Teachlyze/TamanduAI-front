@@ -14,7 +14,7 @@ export default function Sobre() {
       >
         <AboutPageTemplate />
       </Main>
-      <Footer />
+      <Footer prop="bg-blue-200" />
     </>
   );
 }

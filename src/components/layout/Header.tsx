@@ -9,8 +9,11 @@ export default function Header() {
   const router = useRouter();
 
   return (
-    <header className="flex justify-between items-center p-4 bg-slate-200">
-      <h1 className="text-3xl font-medium drop-shadow-2xl text-black cursor-pointer" onClick={() => router.push('/')}>
+    <header className="flex justify-between items-center p-4 bg-black text-white">
+      <h1
+        className="text-3xl font-medium drop-shadow-2xl cursor-pointer"
+        onClick={() => router.push('/')}
+      >
         TamanduAI
       </h1>
       <nav className="space-x-6 flex">
@@ -28,7 +31,7 @@ export default function Header() {
             }}
           >
             <SelectTrigger
-              className="max-w-40 bg-white border-2 border-blue-500"
+              className="max-w-40 bg-white border-2 border-green-500"
               defaultValue="none"
             >
               <SelectValue placeholder="Páginas" />
@@ -42,31 +45,31 @@ export default function Header() {
           <div className="flex items-center">
             <Link
               href="/Profile"
-              className="bg-white border-2 rounded-full border-black font-medium flex p-2 items-center gap-1"
+              className="text-black bg-white border-2 hover:border-green-500 rounded-full border-white font-medium flex p-2 items-center gap-1"
             >
               <UserIcon strokeWidth={2} />
             </Link>
           </div>
         </div>
-        <div className="hidden md:flex items-center gap-6 text-black">
+        <div className="hidden md:flex items-center gap-6">
           <Link
             href="/Sobre"
-            className="shadow-md rounded-xl p-2 hover:bg-yellow-400 hover:text-white
-            transition-all ease-in-out border border-gray-600 font-medium flex items-center gap-2"
+            className="shadow-md rounded-lg p-2 hover:bg-green-500 hover:text-white
+            transition-all ease-in-out border-2 border-green-500 font-medium flex items-center gap-2"
           >
             <Info size={16} /> Sobre nós
           </Link>
           <Link
             href="/Contato"
-            className="shadow-md rounded-xl p-2 hover:bg-yellow-400 hover:text-white
-            transition-all ease-in-out border border-gray-600 font-medium flex items-center gap-2"
+            className="shadow-md rounded-lg p-2 hover:bg-green-500 hover:text-white
+            transition-all ease-in-out border-2 border-green-500 font-medium flex items-center gap-2"
           >
             <Phone size={16} /> Contato
           </Link>
           <Link
             href="/Dashboard"
-            className="shadow-md rounded-xl p-2 hover:bg-yellow-400 hover:text-white
-            transition-all ease-in-out border border-gray-600 font-medium flex items-center gap-2"
+            className="shadow-md rounded-lg p-2 hover:bg-green-500 hover:text-white
+            transition-all ease-in-out border-2 border-green-500 font-medium flex items-center gap-2"
           >
             <LayoutDashboard size={16} /> Dashboard
           </Link>

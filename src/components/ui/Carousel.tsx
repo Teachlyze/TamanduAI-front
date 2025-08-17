@@ -34,24 +34,22 @@ export default function FeedbackCarousel({
   return (
     <section>
       <div className="overflow-hidden">
-        <div
-          ref={trackRef}
-          className="flex items-center gap-52 will-change-transform p-1"
-        >
+        <div ref={trackRef} className="flex items-center gap-42 will-change-transform py-4">
           {[...feedbacks, ...feedbacks].map((f, idx) => (
             <div
               key={idx}
-              className="flex-none shrink-0 w-[90%] sm:w-[400px] sm:h-[160px] bg-gray-50 shadow-lg shadow-black/30 rounded-xl p-6"
+              className="cursor-pointer hover:scale-105 transition-all duration-150 ease-in-out flex-none shrink-0 w-[90%]
+              sm:w-[400px] sm:h-[220px] bg-gray-50 hover:shadow-lg hover:shadow-black/30 rounded-xl p-6"
             >
               <div className="flex items-center justify-between border-b-2 border-yellow-400 pb-2">
-                <h4 className="text-lg font-semibold">{f.nome}</h4>
-                <div className="flex text-yellow-500 gap-1 text-shadow-lg text-shadow-yellow-800 text-xl">
+                <h4 className="text-xl font-semibold">{f.nome}</h4>
+                <div className="flex text-yellow-500 gap-1 text-shadow-lg text-shadow-yellow-800 text-2xl">
                   {Array.from({ length: f.stars }).map((_, i) => (
                     <span key={i}>★</span>
                   ))}
                 </div>
               </div>
-              <p className="mt-2 text-gray-800 font-medium">{f.feedback}</p>
+              <p className="py-6 text-gray-800 font-medium text-xl">{f.feedback}</p>
             </div>
           ))}
         </div>
