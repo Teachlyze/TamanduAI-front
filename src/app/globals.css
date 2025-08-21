@@ -125,3 +125,15 @@
   display: flex;
   flex-direction: row;
 }
+
+.title {
+  @apply text-3xl md:text-5xl;
+}
+
+.subtitle {
+  @apply text-2xl md:text-3xl;
+}
+
+.text {
+  @apply text-base md:text-lg;
+}

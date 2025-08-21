@@ -3,7 +3,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import Image from 'next/image';
-import FeedbackCarousel from '@/components/ui/Carousel';
 import {
   AlarmClockPlus,
   BookHeadphones,
@@ -81,30 +80,30 @@ export default function HomePageTemplate() {
     <section className="mx-auto min-h-screen bg-blue-900">
       <section
         className="flex items-center min-h-screen justify-center
-       mx-auto bg-gradient-to-r from-blue-400 via-blue-800 to-blue-400 text-white"
+       mx-auto bg-gradient-to-br from-blue-400 to-blue-800  text-white"
       >
         <div className="flex flex-col justify-center max-md:items-center max-w-xl gap-4">
           <h2
-            className="flex gap-2 border border-yellow-400 bg-yellow-400 font-medium
-           p-1 px-2 rounded-full w-fit text-white uppercase shadow-md shadow-yellow-400/50"
+            className="flex items-center gap-2 border border-yellow-400 bg-yellow-400 font-bold
+            p-[2px] px-2 text-[9px] sm:text-xs rounded-full w-fit text-black uppercase max-w-[90%]"
           >
-            <Star fill="white" className="p-0.6" />
-            Faça parte da inovação da educação piauiense!
+            <Star fill="white" className="text-white p-0.6" />
+            Faça parte da inovação da educação do Piauí!
           </h2>
-          <div className="flex flex-col max-md:items-center text-white rounded-2xl space-y-2 w-full max-md:text-center">
-            <h1 className="p-1 md:text-5xl text-2xl font-bold mb-1 drop-shadow-lg">
+          <div className="flex flex-col max-md:items-center text-white rounded-2xl space-y-2 px-2 w-full max-md:text-center text-left">
+            <h1 className="title font-bold mb-1 drop-shadow-lg">
               Sua gestão educacional com inteligência
             </h1>
-            <p className="md:text-3xl text-2xl mb-6 drop-shadow-md">
+            <p className="subtitle mb-6 drop-shadow-md">
               Transforme a experiência do ensino híbrido com automações inteligentes, tutoriais
               dinâmicos e controle total sobre seu ambiente virtual.
             </p>
             <Link
               href={'/auth/login'}
-              className="flex items-center gap-2 bg-yellow-400 w-fit
-           hover:bg-yellow-600 text-white hover:text-white font-semibold 
+              className="flex items-center justify-center gap-2 bg-yellow-400 w-full md:w-fit
+           hover:bg-yellow-600 text-black  hover:text-white font-semibold 
            px-4 py-2 rounded-lg cursor-pointer transition-colors duration-300
-           border border-white shadow-lg shadow-black/50 uppercase"
+           border border-white uppercase"
             >
               Comece agora
               <GraduationCap size={28} height={28} width={28} />
@@ -122,73 +121,105 @@ export default function HomePageTemplate() {
         </div>
       </section>
 
-      <section className="py-6 min-h-screen w-full flex flex-col max-md:gap-6 items-end bg-slate-200 justify-center mx-auto px-4">
-        <div className="flex md:flex-row-reverse flex-col-reverse  gap-6 items-center justify-center max-w-5xl mx-auto">
-          <p className="font-medium">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum placeat, dolor ab
-            molestiae laudantium dicta repudiandae molestias nostrum tempore.
-          </p>
-          <div
-            className={`max-w-[300px] relative after:content-[''] after:top-[-4] after:left-1 after:z-[-10] 
+      <section className="py-12 min-h-screen items-end bg-gray-300 justify-center mx-auto px-2">
+        <div className="w-fit flex flex-col max-md:gap-12 p-6 rounded-lg shadow-xl bg-gray-100 mx-auto">
+          <h3 className="font-bold text-center title">Funcionalidades</h3>
+          <div className="flex md:flex-row-reverse flex-col-reverse  gap-6 items-center justify-center max-w-5xl mx-auto">
+            <p className="font-bold max-md:text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum placeat, dolor ab
+              molestiae laudantium dicta repudiandae molestias nostrum tempore.
+            </p>
+            <div
+              className={`max-w-[300px] relative after:content-[''] after:top-[-4] after:left-1 after:z-[-10] 
             z-100 md:after:w-[101%] after:w-[100%] after:h-[100%] md:after:h-[104%] after:rotate-4 after:p-4
             after:absolute after:bg-blue-500 after:rounded-md`}
-          >
-            <Image height={400} width={400} alt="foto" className="rounded-md" src="/homer_f.gif" />
+            >
+              <Image
+                height={400}
+                width={400}
+                alt="foto"
+                className="rounded-md"
+                src="/homer_f.gif"
+              />
+            </div>
           </div>
-        </div>
-        <div className="flex md:flex-row flex-col-reverse gap-6 items-center justify-center max-w-5xl mx-auto">
-          <p className="font-medium">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum placeat, dolor ab
-            molestiae laudantium dicta repudiandae molestias nostrum tempore.
-          </p>
-          <div
-            className={`max-w-[300px] relative after:content-[''] after:top-[-4] after:left-1 after:z-[-10] 
+          <div className="flex md:flex-row flex-col-reverse gap-6 items-center justify-center max-w-5xl mx-auto">
+            <p className="font-bold max-md:text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum placeat, dolor ab
+              molestiae laudantium dicta repudiandae molestias nostrum tempore.
+            </p>
+            <div
+              className={`max-w-[300px] relative after:content-[''] after:top-[-4] after:left-1 after:z-[-10] 
             z-100 md:after:w-[101%] after:w-[100%] after:h-[100%] md:after:h-[104%] after:rotate-4 after:p-4
             after:absolute after:bg-blue-500 after:rounded-md`}
-          >
-            <Image height={400} width={400} alt="foto" className="rounded-md" src="/homer_f.gif" />
+            >
+              <Image
+                height={400}
+                width={400}
+                alt="foto"
+                className="rounded-md"
+                src="/homer_f.gif"
+              />
+            </div>
           </div>
-        </div>
-        <div className="flex md:flex-row-reverse flex-col-reverse gap-6 items-center justify-center max-w-5xl mx-auto">
-          <p className="font-medium">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum placeat, dolor ab
-            molestiae laudantium dicta repudiandae molestias nostrum tempore.
-          </p>
-          <div
-            className={`max-w-[300px] relative after:content-[''] after:top-[-4] after:left-1 after:z-[-10] 
+          <div className="flex md:flex-row-reverse flex-col-reverse gap-6 items-center justify-center max-w-5xl mx-auto">
+            <p className="font-bold max-md:text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum placeat, dolor ab
+              molestiae laudantium dicta repudiandae molestias nostrum tempore.
+            </p>
+            <div
+              className={`max-w-[300px] relative after:content-[''] after:top-[-4] after:left-1 after:z-[-10] 
             z-100 md:after:w-[101%] after:w-[100%] after:h-[100%] md:after:h-[104%] after:rotate-4 after:p-4
             after:absolute after:bg-blue-500 after:rounded-md`}
-          >
-            <Image height={400} width={400} alt="foto" className="rounded-md" src="/homer_f.gif" />
+            >
+              <Image
+                height={400}
+                width={400}
+                alt="foto"
+                className="rounded-md"
+                src="/homer_f.gif"
+              />
+            </div>
           </div>
-        </div>
-        <div className="flex md:flex-row flex-col-reverse gap-6 items-center justify-center max-w-5xl mx-auto">
-          <p className="font-medium">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum placeat, dolor ab
-            molestiae laudantium dicta repudiandae molestias nostrum tempore.
-          </p>
-          <div
-            className={`max-w-[300px] relative after:content-[''] after:top-[-4] after:left-1 after:z-[-10] 
+          <div className="flex md:flex-row flex-col-reverse gap-6 items-center justify-center max-w-5xl mx-auto">
+            <p className="font-bold max-md:text-justify">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum placeat, dolor ab
+              molestiae laudantium dicta repudiandae molestias nostrum tempore.
+            </p>
+            <div
+              className={`max-w-[300px] relative after:content-[''] after:top-[-4] after:left-1 after:z-[-10] 
             z-100 md:after:w-[101%] after:w-[100%] after:h-[100%] md:after:h-[104%] after:rotate-4 after:p-4
             after:absolute after:bg-blue-500 after:rounded-md`}
-          >
-            <Image height={400} width={400} alt="foto" className="rounded-md" src="/homer_f.gif" />
+            >
+              <Image
+                height={400}
+                width={400}
+                alt="foto"
+                className="rounded-md"
+                src="/homer_f.gif"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="flex flex-col justify-center gap-18 bg-gradient-to-r from-blue-400 via-blue-800 to-blue-400 h-screen">
-        <div>
-          <h2 className="text-3xl font-medium text-center text-white drop-shadow-md mb-6">
-            O que dizem nossos <strong className="text-yellow-400">professores</strong>
-          </h2>
-          <i></i>
-        </div>
-        <FeedbackCarousel feedbacks={usersFeedbacks} />
+      <section className="flex flex-col justify-center py-12 gap-18 bg-gradient-to-tr from-blue-400 to-blue-800 min-h-screen">
+        <h3 className="max-w-[90%] mx-auto subtitle  font-bold text-center text-white drop-shadow-md mb-6">
+          <strong className="text-yellow-400">Professores</strong> que já estão transformando suas
+          aulas com a TamanduAI
+        </h3>
+        {usersFeedbacks?.map((feedback, i) => (
+          <div key={i} className="max-w-5xl mx-auto">
+            <div>
+              <p></p>
+              <span>{feedback.stars}</span>
+            </div>
+          </div>
+        ))}
       </section>
       {/* Funcionalidades + Demo DESKTOP*/}
-      <section className="min-h-screen hidden md:block bg-slate-200 px-4 py-6">
-        <h3 className="text-3xl font-bold text-center drop-shadow-md mb-12">
+      <section className="min-h-screen hidden md:block bg-slate-200 px-4 py-12">
+        <h3 className="title font-bold text-center drop-shadow-md mb-12">
           Funcionalidades Exclusivas
         </h3>
         <div className="max-w-5xl mx-auto bg-blue-500 p-6 rounded-xl shadow-lg shadow-black/60 text-white">
@@ -208,7 +239,7 @@ export default function HomePageTemplate() {
             <TabsContent value="func1" className="mt-6 text-xl">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h4 className="text-xl font-medium drop-shadow-lg mb-2">
+                  <h4 className="text-xl font-bold drop-shadow-lg mb-2">
                     Cadastro simplificado de alunos
                   </h4>
                   <p>Adicione alunos com poucos cliques, de forma rápida e sem complicações.</p>
@@ -229,7 +260,7 @@ export default function HomePageTemplate() {
             <TabsContent value="func2" className="mt-6 text-xl">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h4 className="text-xl font-medium drop-shadow-lg mb-2">Relatórios detalhados</h4>
+                  <h4 className="text-xl font-bold drop-shadow-lg mb-2">Relatórios detalhados</h4>
                   <p>Visualize relatórios completos com desempenho, frequência e mais.</p>
                 </div>
                 <div className="rounded-xl overflow-hidden">
@@ -247,7 +278,7 @@ export default function HomePageTemplate() {
             <TabsContent value="func3" className="mt-6 text-xl">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h4 className="text-xl font-medium drop-shadow-lg mb-2">Notas automatizadas</h4>
+                  <h4 className="text-xl font-bold drop-shadow-lg mb-2">Notas automatizadas</h4>
                   <p>Notas lançadas automaticamente com integração aos sistemas acadêmicos.</p>
                 </div>
                 <div className="rounded-xl overflow-hidden">
@@ -264,60 +295,11 @@ export default function HomePageTemplate() {
           </Tabs>
         </div>
       </section>
-      <section className="hidden max-md:block bg-green-500 px-6 text-white  ">
-        <h3 className="text-2xl font-bold text-center mb-12">Funcionalidades</h3>
-        <ul className="space-y-6">
-          <li className="max-w-[360px] h-full flex flex-col items-center justify-center mx-auto">
-            <p className="text-lg font-semibold mb-2">Cadastro de Aluno</p>
-            <Image
-              src="/homer_f.gif"
-              alt="TamanduAI-educacional"
-              width={500}
-              height={300}
-              className="rounded-xl object-cover border-2 border-gray-700 shadow-lg"
-            />
-            <p className="text-sm mt-2 bg-gray-600/30 p-2 rounded-lg text-center font-semibold">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit atque tempore libero,
-              labore rerum vero! Vel aliquid facilis debitis non nisi eum quam praesentium
-              consequuntur qui, nam, nemo reiciendis animi?
-            </p>
-          </li>
-          <li className="max-w-[360px] h-full flex flex-col items-center justify-center mx-auto">
-            <p className="text-lg font-semibold mb-2">Plano Pro</p>
-            <Image
-              src="/homer_f.gif"
-              alt="TamanduAI-educacional"
-              width={500}
-              height={300}
-              className="rounded-xl object-cover border-2 border-gray-700 shadow-lg"
-            />
-            <p className="text-sm  mt-2 bg-gray-600/30 p-2 rounded-lg text-center font-semibold">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit atque tempore libero,
-              labore rerum vero! Vel aliquid facilis debitis non nisi eum quam praesentium
-              consequuntur qui, nam, nemo reiciendis animi?
-            </p>
-          </li>
-          <li className="max-w-[360px] h-full flex flex-col items-center justify-center mx-auto">
-            <p className="text-lg font-semibold mb-2">Plano Empresarial</p>
-            <Image
-              src="/homer_f.gif"
-              alt="TamanduAI-educacional"
-              width={500}
-              height={300}
-              className="rounded-xl object-cover border-2 border-gray-700 shadow-lg"
-            />
-            <p className="text-sm bg-gray-600/30 p-2 rounded-lg mt-2 text-center font-semibold">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit atque tempore libero,
-              labore rerum vero! Vel aliquid facilis debitis non nisi eum quam praesentium
-              consequuntur qui, nam, nemo reiciendis animi?
-            </p>
-          </li>
-        </ul>
-      </section>
+
       <section className="px-4 bg-slate-200 text-black py-6">
         <div>
-          <h2 className="text-2xl font-bold text-center mb-6">Planos para Todos os Perfis</h2>
-          <p className="text-center max-w-2xl mx-auto mb-6 font-medium md:text-xl">
+          <h3 className="text-2xl font-bold text-center mb-6">Planos para Todos os Perfis</h3>
+          <p className="text-center max-w-2xl mx-auto mb-6 font-bold md:text-xl">
             A <strong>TamanduAI</strong> oferece planos flexíveis, com um bom custo benefício, para
             atender desde usuários iniciantes até instituições completas. Escolha o plano ideal para
             você!
@@ -330,7 +312,7 @@ export default function HomePageTemplate() {
               className={`
             p-0
             rounded-2xl shadow-md 
-            border-3 border-yellow-500 min-h-[364px] min-w-[360px]
+            border-3 border-yellow-500 min-h-[364px]
             hover:shadow-lg bg-slate-200
            text-black transition-all duration-300`}
             >
@@ -362,7 +344,7 @@ export default function HomePageTemplate() {
                     <span className="text-xl">12x</span> R$25,50
                   </h4>
                 </div>
-                <p className="w-full text-start text-lg font-medium">Recursos principais:</p>
+                <p className="w-full text-start text-lg font-bold">Recursos principais:</p>
                 <ul
                   className="flex flex-col justify-center 
                 items-center text-center gap-4 m-1"
