@@ -69,12 +69,6 @@ export default function HomePageTemplate() {
         'A plataforma é intuitiva e fácil de usar. Recomendo para qualquer instituição de ensino.',
       stars: 5,
     },
-    {
-      nome: 'Ana Costa',
-      feedback:
-        'A TamanduAI transformou nossa gestão educacional. As funcionalidades são práticas e eficientes.',
-      stars: 5,
-    },
   ];
   return (
     <section className="mx-auto min-h-screen bg-blue-900">
@@ -91,7 +85,7 @@ export default function HomePageTemplate() {
             Faça parte da inovação da educação do Piauí!
           </h2>
           <div className="flex flex-col max-md:items-center text-white rounded-2xl space-y-2 px-2 w-full max-md:text-center text-left">
-            <h1 className="title font-bold mb-1 drop-shadow-lg">
+            <h1 className="max-sm:text-4xl text-5xl  font-bold mb-1 drop-shadow-lg">
               Sua gestão educacional com inteligência
             </h1>
             <p className="subtitle mb-6 drop-shadow-md">
@@ -123,7 +117,7 @@ export default function HomePageTemplate() {
 
       <section className="py-12 min-h-screen items-end bg-gray-300 justify-center mx-auto px-2">
         <div className="w-fit flex flex-col max-md:gap-12 p-6 rounded-lg shadow-xl bg-gray-100 mx-auto">
-          <h3 className="font-bold text-center title">Funcionalidades</h3>
+          <h3 className="font-bold text-center title md:mb-6">Funcionalidades</h3>
           <div className="flex md:flex-row-reverse flex-col-reverse  gap-6 items-center justify-center max-w-5xl mx-auto">
             <p className="font-bold max-md:text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum placeat, dolor ab
@@ -208,14 +202,61 @@ export default function HomePageTemplate() {
           <strong className="text-yellow-400">Professores</strong> que já estão transformando suas
           aulas com a TamanduAI
         </h3>
-        {usersFeedbacks?.map((feedback, i) => (
-          <div key={i} className="max-w-5xl mx-auto">
-            <div>
-              <p></p>
-              <span>{feedback.stars}</span>
+        <div className="flex flex-wrap justify-center gap-2 max-w-6xl px-2 mx-auto">
+          {usersFeedbacks?.map((feedback, i) => (
+            <div
+              key={i}
+              className="space-y-2 mx-auto bg-white p-3 w-full max-w-[348px] rounded-lg shadow-lg"
+            >
+              <div className="flex justify-between items-center text-center">
+                {/* Foto + Nome */}
+                <div className="flex gap-2 items-center">
+                  <Image
+                    src="/logo.png"
+                    alt="TamanduAI-educacional"
+                    className="w-14 h-14 rounded-full object-cover border border-gray-400"
+                    width={70}
+                    height={70}
+                  />
+                  <h4 className="text font-semibold">{feedback.nome}</h4>
+                </div>
+
+                {/* Estrelas */}
+                <div className="flex rounded-full max-sm:hidden">
+                  {Array.from({ length: feedback.stars }).map((star, i) => {
+                    if (i < 6) {
+                      return (
+                        <span
+                          style={{ letterSpacing: '2px' }}
+                          key={i}
+                          className="text-xl font-bold text-yellow-400 select-none"
+                        >
+                          ★
+                        </span>
+                      );
+                    }
+                  })}
+                </div>
+              </div>
+              <p className="text text-gray-700 w-full">{feedback.feedback}</p>
+              <div className="flex justify-end rounded-full sm:hidden">
+                {Array.from({ length: feedback.stars }).map((star, i) => {
+                  if (i < 6) {
+                    return (
+                      <span
+                        style={{ letterSpacing: '2px' }}
+                        key={i}
+                        className="text-xl font-bold text-yellow-400 select-none"
+                      >
+                        ★
+                      </span>
+                    );
+                  }
+                })}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </section>
       {/* Funcionalidades + Demo DESKTOP*/}
       <section className="min-h-screen hidden md:block bg-slate-200 px-4 py-12">
@@ -297,12 +338,12 @@ export default function HomePageTemplate() {
       </section>
 
       <section className="px-4 bg-slate-200 text-black py-6">
-        <div>
-          <h3 className="text-2xl font-bold text-center mb-6">Planos para Todos os Perfis</h3>
-          <p className="text-center max-w-2xl mx-auto mb-6 font-bold md:text-xl">
-            A <strong>TamanduAI</strong> oferece planos flexíveis, com um bom custo benefício, para
-            atender desde usuários iniciantes até instituições completas. Escolha o plano ideal para
-            você!
+        <div className="max-w-5xl mx-auto text-center">
+          <h3 className="text-2xl font-bold mb-6">Assinatura</h3>
+          <p className="max-w-2xl mx-auto mb-6 font-bold md:text-xl">
+            A <strong>TamanduAI</strong> oferece a melhor solução para sua instituição de ensino,
+            com um plano acessível e recursos inovadores. Descubra como nossa plataforma pode
+            transformar sua gestão educacional.
           </p>
         </div>
         <div className="grid md:grid-cols-1 gap-8 max-w-6xl justify-items-center mx-auto">
