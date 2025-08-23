@@ -137,3 +137,39 @@
 .text {
   @apply text-base md:text-lg;
 }
+
+/* faça uma animção de levantar o elemento para cima e para baixo */
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.up {
+  animation: upAndDown 1.4s linear infinite;
+}
+
+@keyframes shadowPulse {
+  0% {
+    transform: scaleX(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scaleX(0.85);
+    opacity: 0.25;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0.4;
+  }
+}
+
+.shadow-animate {
+  animation: shadowPulse 1.4s linear infinite;
+}
