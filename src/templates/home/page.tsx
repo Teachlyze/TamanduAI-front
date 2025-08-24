@@ -12,6 +12,7 @@ import {
   GraduationCap,
   Rocket,
   ScrollText,
+  Star,
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -33,18 +34,18 @@ export default function HomePageTemplate() {
   return (
     <section className="mx-auto min-h-screen bg-blue-900">
       <section
-        className="flex items-center min-h-screen justify-center px-4
+        className="relative flex items-center min-h-screen justify-center px-4
        mx-auto bg-gradient-to-br from-blue-400 to-blue-800 text-white"
       >
         <div className="flex flex-col justify-center max-md:items-center container">
           <div className="flex flex-col max-md:items-center text-white rounded-2xl space-y-2 px-2 w-full max-md:text-center text-left">
-            <h1 className="max-sm:text-4xl text-5xl font-bold mb-4 drop-shadow-lg">
+            <h1 className="max-sm:text-3xl sm:text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
               Sua gestão educacional com inteligência
             </h1>
-            <p className="subtitle mb-6 drop-shadow-md max-w-3xl">
+            <h2 className="subtitle mb-6 drop-shadow-md max-w-3xl">
               Transforme a experiência do ensino híbrido com automações inteligentes, tutoriais
               dinâmicos e controle total sobre seu ambiente virtual.
-            </p>
+            </h2>
             <Link
               href={'/auth/login'}
               className="flex items-center justify-center gap-2 bg-yellow-400 w-full md:w-fit
@@ -68,10 +69,18 @@ export default function HomePageTemplate() {
           />
           <div className="shadow-animate absolute bottom-32 left-4 w-[300px] z-100 h-10 bg-black rounded-full blur-xl"></div>
         </div>
-      </section>  
+        <div
+          className="flex items-center justify-center bg-gradient-to-r from-green-500 to-yellow-500
+         p-2 rounded-lg w-full max-w-xl max-md:hidden absolute 
+         bottom-4 left-1/2 transform -translate-x-1/2 uppercase text-white font-bold gap-2"
+        >
+          <Star fill="white" />
+          <span>Faça parte da inovação da educação Piauisense</span>
+        </div>
+      </section>
       <section className="md:hidden py-12 min-h-screen items-end bg-gray-300 justify-center mx-auto px-2">
         <div className="container flex flex-col max-lg:gap-12 p-6 rounded-lg shadow-xl bg-gray-100 mx-auto">
-          <h2 className="font-bold text-center title md:mb-2">Funcionalidades</h2>
+          <h2 className="font-bold text-center md:mb-2">Funcionalidades</h2>
           <div className="flex md:flex-row-reverse flex-col-reverse  gap-6 items-center justify-center w-full max-w-7xl mx-auto">
             <p className="lg:max-w-[70%] text font-bold max-md:text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum illum placeat, dolor ab
@@ -170,7 +179,7 @@ export default function HomePageTemplate() {
                     width={56}
                     height={56}
                   />
-                  <h4 className="text-lg font-semibold text-gray-900">{feedback.nome}</h4>
+                  <p className="font-semibold text-gray-900">{feedback.nome}</p>
                 </div>
 
                 {/* Estrelas */}
@@ -179,7 +188,7 @@ export default function HomePageTemplate() {
                     <span
                       key={i}
                       style={{ letterSpacing: '2px' }}
-                      className="text-xl font-bold text-yellow-400 select-none"
+                      className="font-bold text-yellow-400 select-none"
                     >
                       ★
                     </span>
@@ -188,7 +197,7 @@ export default function HomePageTemplate() {
               </div>
 
               {/* Texto do feedback */}
-              <p className="text bg-gray-400/10 rounded-lg p-2 w-fit max-md:text-center text-gray-700 mt-3 leading-relaxed">
+              <p className="bg-gray-400/10 rounded-lg p-2 w-fit max-md:text-center text-gray-700 mt-3 leading-relaxed">
                 {feedback.feedback}
               </p>
             </div>
@@ -197,9 +206,7 @@ export default function HomePageTemplate() {
       </section>
       {/* Funcionalidades + Demo DESKTOP*/}
       <section className="min-h-screen hidden md:block bg-slate-200 px-4 py-12">
-        <h2 className="title font-bold text-center drop-shadow-md mb-12">
-          Funcionalidades Exclusivas
-        </h2>
+        <h2 className="font-bold text-center drop-shadow-md mb-12">Funcionalidades Exclusivas</h2>
         <div className="w-full max-w-7xl mx-auto bg-blue-500 p-6 rounded-xl shadow-lg shadow-black/60 text-white">
           <Tabs defaultValue="func1">
             <TabsList className="justify-center gap-4 bg-yellow-400 rounded-lg">
@@ -217,12 +224,10 @@ export default function HomePageTemplate() {
               </TabsTrigger>
             </TabsList>
 
-            <TabsContent value="func1" className="mt-6 text-xl">
+            <TabsContent value="func1" className="text-xl">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h4 className="title font-bold drop-shadow-lg mb-2">
-                    Cadastro simplificado de alunos
-                  </h4>
+                  <h4 className="font-bold drop-shadow-lg mb-2">Cadastro simplificado de alunos</h4>
                   <p className="subtitle">
                     Adicione alunos com poucos cliques, de forma rápida e sem complicações.
                   </p>
@@ -243,7 +248,7 @@ export default function HomePageTemplate() {
             <TabsContent value="func2" className="mt-6 text-xl">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h4 className="title font-bold drop-shadow-lg mb-2">Relatórios detalhados</h4>
+                  <h4 className="font-bold drop-shadow-lg mb-2">Relatórios detalhados</h4>
                   <p className="subtitle">
                     Visualize relatórios completos com desempenho, frequência e mais.
                   </p>
@@ -263,7 +268,7 @@ export default function HomePageTemplate() {
             <TabsContent value="func3" className="mt-6 text-xl">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h4 className="title font-bold drop-shadow-lg mb-2">Notas automatizadas</h4>
+                  <h4 className="font-bold drop-shadow-lg mb-2">Notas automatizadas</h4>
                   <p className="subtitle">
                     Notas lançadas automaticamente com integração aos sistemas acadêmicos.
                   </p>
