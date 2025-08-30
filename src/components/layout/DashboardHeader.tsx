@@ -1,95 +1,125 @@
+import Image from 'next/image';
 import {
+  Bolt,
+  BookMarked,
+  BookOpen,
   Columns3Cog,
-  Menu,
   Info,
+  Menu,
   Phone,
-  UserIcon,
-  Trash,
   School,
+  Trash2,
+  UserIcon,
   UserRoundCog,
 } from 'lucide-react';
+import { SheetContent, SheetHeader, SheetTitle, SheetTrigger, Sheet } from '../ui/sheet';
 import Link from 'next/link';
-import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from '../ui/sheet';
+import ChangeTheme from '../ui/changeTheme';
 
 export default function DashboardHeader() {
   return (
-    <header className="p-2 flex sm:flex-col max-sm:justify-between items-center gap-16 bg-black/80 text-white">
-      <Link href={'/'} className="font-bold">
-        <Columns3Cog size={40} />
-      </Link>
+    <header className="bg-black w-full shadow-md">
+      <div className="px-3 p-2 mx-auto max-w-7xl flex justify-between items-center gap-16 text-white">
+        <div className="flex items-center font-medium justify-between gap-2">
+          <BookOpen className="w-10 h-10 p-2 bg-blue-600 rounded-lg text-white" />
+          <p>TamanduAI-Classs</p>
+        </div>
 
-      <div className="flex sm:hidden ml-auto">
+        <ul className="max-sm:hidden flex gap-8 items-center">
+          <li>
+            <ChangeTheme />
+          </li>
+          <li className="cursor-pointer hover:bg-gray-500/50 p-2 rounded-lg">
+            <BookMarked strokeWidth={2} />
+          </li>
+          <li className="cursor-pointer hover:bg-gray-500/50 p-2 rounded-lg">
+            <Bolt strokeWidth={2} />
+          </li>
+          <li className="">
+            <Image
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="profile"
+              className="rounded-full border-2 border-blue-500"
+              width={50}
+              height={50}
+            />
+          </li>
+        </ul>
         <Sheet>
-          <SheetTrigger asChild>
-            <button className="p-2 rounded-md bg-transparent text-white">
-              <Menu className="h-6 w-6" />
-            </button>
+          <SheetTrigger className="sm:hidden">
+            <Menu />
           </SheetTrigger>
-          <SheetContent side="left" className="px-2 bg-black text-white border-r-2 border-gray-400">
-            <SheetHeader className="py-4 px-2">
-              <SheetTitle className="subtitle text-white">Navegação</SheetTitle>
+          <SheetContent side="right" className="w-64 bg-slate-100">
+            <SheetHeader className="w-full m-0 p-2">
+              <SheetTitle>Menu</SheetTitle>
             </SheetHeader>
-            <nav className="flex flex-col gap-6 px-2 overflow-y-auto h-[80vh]">
-              <Link
-                href="/Profile"
-                className="text flex justify-between w-full hover:bg-gray-700/40 rounded-lg p-2"
-              >
-                Perfil
-                <UserIcon className="inline ml-1" />
-              </Link>
-              <Link
-                href={'/Dashboard'}
-                className="text flex justify-between w-full hover:bg-gray-700/40 rounded-lg p-2"
-              >
-                Configurar Turma
-                <Columns3Cog size={28} />
-              </Link>
-              <Link
-                href={'/Dashboard'}
-                className="text flex justify-between w-full hover:bg-gray-700/40 rounded-lg p-2"
-              >
-                Deletar Turma
-                <Trash size={28} />
-              </Link>
-              <Link
-                href={'/Dashboard'}
-                className="text flex justify-between w-full hover:bg-gray-700/40 rounded-lg p-2"
-              >
-                Escolas
-                <School size={28} />
-              </Link>
-              <Link
-                href="/Sobre"
-                className="text flex justify-between w-full hover:bg-gray-700/40 rounded-lg p-2"
-              >
-                Sobre
-                <Info className="inline ml-1" />
-              </Link>
-              <Link
-                href="/Contato"
-                className="text flex justify-between w-full hover:bg-gray-700/40 rounded-lg p-2"
-              >
-                Contato
-                <Phone className="inline ml-1" />
-              </Link>
-            </nav>
+            <ul className="flex flex-col gap-4 mt-2">
+              <li className="w-[90%] mx-auto">
+                <Link
+                  className="flex justify-between border-b border-gray-600 p-2"
+                  href="/dashboard"
+                >
+                  Dashboard
+                  <Columns3Cog className="inline mr-2" />
+                </Link>
+              </li>
+              <li className="w-[90%] mx-auto">
+                <Link
+                  className="flex justify-between border-b border-gray-600 p-2"
+                  href="/dashboard/profile"
+                >
+                  Perfil
+                  <UserIcon className="inline mr-2" />
+                </Link>
+              </li>
+              <li className="w-[90%] mx-auto">
+                <Link
+                  className="flex justify-between border-b border-gray-600 p-2"
+                  href="/dashboard/settings"
+                >
+                  Configurações
+                  <UserRoundCog className="inline mr-2" />
+                </Link>
+              </li>
+              <li className="w-[90%] mx-auto">
+                <Link
+                  className="flex justify-between border-b border-gray-600 p-2"
+                  href="/dashboard/school"
+                >
+                  Escola
+                  <School className="inline mr-2" />
+                </Link>
+              </li>
+              <li className="w-[90%] mx-auto">
+                <Link
+                  className="flex justify-between border-b border-gray-600 p-2"
+                  href="/dashboard/contact"
+                >
+                  Contato
+                  <Phone className="inline mr-2" />
+                </Link>
+              </li>
+              <li className="w-[90%] mx-auto">
+                <Link
+                  className="flex justify-between border-b border-gray-600 p-2"
+                  href="/dashboard/about"
+                >
+                  Sobre
+                  <Info className="inline mr-2" />
+                </Link>
+              </li>
+              <li className="w-[90%] mx-auto">
+                <Link
+                  className="flex justify-between text-red-600 p-2"
+                  href="/dashboard/delete-account"
+                >
+                  Deletar conta
+                  <Trash2 className="inline mr-2" />
+                </Link>
+              </li>
+            </ul>
           </SheetContent>
         </Sheet>
-      </div>
-
-      <div className="max-sm:hidden flex sm:flex-col gap-6">
-        <Link href={'/Dashboard'} className="font-bold">
-          <Columns3Cog size={28} />
-        </Link>
-        <Link href={'/Dashboard'} className="font-bold">
-          <Trash size={28} />
-        </Link>
-        <Link href={'/Dashboard'} className="font-bold">
-          <School size={28} />
-        </Link>
-        <Link href={'/Dashboard'} className="font-bold">
-          <UserRoundCog size={28} />
-        </Link>
       </div>
     </header>
   );

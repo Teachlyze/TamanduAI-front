@@ -25,28 +25,28 @@ export default function Header() {
             </SheetHeader>
             <nav className="flex flex-col gap-6 px-2">
               <Link
-                href="/Sobre"
+                href="/sobre"
                 className="text flex justify-between w-full hover:bg-gray-700/40 rounded-lg p-2"
               >
                 Sobre
                 <Info className="inline ml-1" />
               </Link>
               <Link
-                href="/Contato"
+                href="/contato"
                 className="text flex justify-between w-full hover:bg-gray-700/40 rounded-lg p-2"
               >
                 Contato
                 <Phone className="inline ml-1" />
               </Link>
               <Link
-                href="/Dashboard"
+                href="/dashboard"
                 className="text flex justify-between w-full hover:bg-gray-700/40 rounded-lg p-2"
               >
                 Dashboard
                 <LayoutDashboard className="inline ml-1" />
               </Link>
               <Link
-                href="/Profile"
+                href="/profile"
                 className="text flex justify-between w-full hover:bg-gray-700/40 rounded-lg p-2"
               >
                 Perfil
@@ -59,31 +59,23 @@ export default function Header() {
 
       <nav className="space-x-6 flex">
         <div className="hidden md:flex items-center gap-6">
+          <div className="flex items-center gap-4">
+            <Link href="/sobre" className="navBarLink">
+              <Info size={16} /> Sobre nós
+            </Link>
+            <span className="py-4 w-[0.4px] bg-white"></span>
+            <Link href="/contato" className="navBarLink">
+              <Phone size={16} /> Contato
+            </Link>
+            <span className="py-4 w-[0.4px] bg-white"></span>
+            <Link href="/dashboard" className="navBarLink">
+              <LayoutDashboard size={16} /> Dashboard
+            </Link>
+            <span className="py-4 w-[0.4px] bg-white"></span>
+          </div>
           <Link
-            href="/Sobre"
-            className="shadow-md rounded-lg p-2 hover:bg-yellow-800 bg-yellow-500 text-black hover:text-white
-            transition-all ease-in-out font-medium flex items-center gap-2"
-          >
-            <Info size={16} /> Sobre nós
-          </Link>
-          <Link
-            href="/Contato"
-            className="shadow-md rounded-lg p-2 hover:bg-yellow-800 bg-yellow-500 text-black hover:text-white
-            transition-all ease-in-out font-medium flex items-center gap-2"
-          >
-            <Phone size={16} /> Contato
-          </Link>
-          <Link
-            href="/Dashboard"
-            className="shadow-md rounded-lg p-2 hover:bg-yellow-800 bg-yellow-500 text-black hover:text-white
-            transition-all ease-in-out font-medium flex items-center gap-2"
-          >
-            <LayoutDashboard size={16} /> Dashboard
-          </Link>
-          <Link
-            href="/Profile"
-            className="text-white border-2 border-yellow-500 
-              duration-150 transition-all ease-in-out bg-black hover:scale-105 hover:bg-yellow-800 rounded-full font-medium flex p-2 items-center gap-1"
+            href="/profile"
+            className="text-white border-2 border-yellow-500 duration-150 transition-all ease-in-out bg-black hover:scale-105 hover:bg-yellow-800 rounded-full font-medium flex p-2 items-center gap-1"
           >
             <UserIcon strokeWidth={2} height={24} width={24} />
           </Link>

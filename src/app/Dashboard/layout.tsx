@@ -15,11 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex max-sm:flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen mx-auto w-full">
       <DashboardHeader />
       <Main
-        props="flex flex-col items-center justify-center 
-    min-h-screen bg-blue-200 w-full"
+        props="flex flex-col items-center
+    min-h-screen mx-auto w-full max-w-7xl mt-1"
       >
         {children}
       </Main>
