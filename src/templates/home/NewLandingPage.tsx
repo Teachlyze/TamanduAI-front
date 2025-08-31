@@ -340,13 +340,13 @@ const NewLandingPage = () => {
             <div className="flex items-center space-x-4">
               <div className="hidden md:flex items-center space-x-2">
                 <Link href="/login" className="no-underline">
-                  <Button asChild variant="outline" className="ml-2">
-                    <span>Entrar</span>
+                  <Button variant="outline" className="ml-2">
+                    Entrar
                   </Button>
                 </Link>
                 <Link href="/register" className="no-underline">
-                  <Button asChild className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700">
-                    <span>Comece Grátis</span>
+                  <Button className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700">
+                    Comece Grátis
                   </Button>
                 </Link>
               </div>
@@ -523,24 +523,20 @@ const NewLandingPage = () => {
                 </p>
               </FadeIn>
               <FadeIn delay={0.4} className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-                <Button 
-                  asChild
-                  className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 text-gray-900 font-semibold py-6 px-8 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  <Link href="/register">
+                <Link href="/register" className="no-underline">
+                  <Button className="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 text-gray-900 font-semibold py-6 px-8 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                     Comece Agora Grátis
                     <ArrowRight className="ml-2 h-5 w-5 inline" />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  className="bg-white/5 hover:bg-white/10 text-white border-white/20 hover:border-white/40 py-6 px-8 text-lg rounded-full transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  <Link href="#features">
+                  </Button>
+                </Link>
+                <Link href="#features" className="no-underline">
+                  <Button
+                    variant="outline"
+                    className="bg-white/5 hover:bg-white/10 text-white border-white/20 hover:border-white/40 py-6 px-8 text-lg rounded-full transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto"
+                  >
                     Conheça Nossos Recursos
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </FadeIn>
             </div>
             
@@ -669,14 +665,15 @@ const NewLandingPage = () => {
             Comece gratuitamente hoje e descubra como a IA pode te ajudar a economizar tempo e melhorar o aprendizado dos seus alunos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              className="bg-white text-green-700 hover:bg-gray-100 px-8 py-6 text-lg font-semibold"
-              size="lg"
-              asChild
-            >
-              Começar Agora Grátis
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link href="/register" className="no-underline">
+              <Button 
+                className="bg-white text-green-700 hover:bg-gray-100 px-8 py-6 text-lg font-semibold"
+                size="lg"
+              >
+                Começar Agora Grátis
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
             <Button 
               variant="outline" 
               className="group relative bg-white/10 hover:bg-white/20 text-white border-2 border-white/40 hover:border-white/60 px-8 py-6 text-lg font-semibold backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-white/10"
