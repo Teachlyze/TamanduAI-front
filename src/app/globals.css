@@ -79,7 +79,7 @@
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
+  --background: oklch(20.019% 0.00002 271.152);
   --foreground: oklch(0.984 0.003 247.858);
   --card: oklch(0.208 0.042 265.755);
   --card-foreground: oklch(0.984 0.003 247.858);
@@ -115,9 +115,6 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }
 
@@ -195,7 +192,7 @@ p {
 }
 
 body {
-  transition: background-color 2s ease-in-out;
+  transition: background-color 1s ease-in-out;
 }
 
 .shadow-animate {
@@ -204,11 +201,12 @@ body {
 
 ::-webkit-scrollbar {
   background-color: #ffffff;
+  border-radius: 10px;
   width: 8px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #414040;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 /* Apenas para o elemento com a classe .meu-scroll */
@@ -217,7 +215,7 @@ body {
 }
 
 .meu-scroll::-webkit-scrollbar-track {
-  background: #f1f1f1; /* cor do fundo da trilha */
+  background: rgb(63, 63, 63); /* cor do fundo da trilha */
   border-radius: 8px;
 }
 
@@ -225,7 +223,7 @@ body {
   background: #3b82f6; /* cor do scroll */
   border-radius: 8px;
 }
-
 .meu-scroll::-webkit-scrollbar-thumb:hover {
+  border-radius: 8px;
   background: #1d4ed8; /* cor quando passa o mouse */
 }

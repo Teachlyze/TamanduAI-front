@@ -25,28 +25,28 @@ export default function Header() {
             </SheetHeader>
             <nav className="flex flex-col gap-6 px-2">
               <Link
-                href="/sobre"
+                href="/Sobre"
                 className="text flex justify-between w-full hover:bg-gray-700/40 rounded-lg p-2"
               >
                 Sobre
                 <Info className="inline ml-1" />
               </Link>
               <Link
-                href="/contato"
+                href="/Contato"
                 className="text flex justify-between w-full hover:bg-gray-700/40 rounded-lg p-2"
               >
                 Contato
                 <Phone className="inline ml-1" />
               </Link>
               <Link
-                href="/dashboard"
+                href="/Dashboard"
                 className="text flex justify-between w-full hover:bg-gray-700/40 rounded-lg p-2"
               >
                 Dashboard
                 <LayoutDashboard className="inline ml-1" />
               </Link>
               <Link
-                href="/profile"
+                href="/Profile"
                 className="text flex justify-between w-full hover:bg-gray-700/40 rounded-lg p-2"
               >
                 Perfil
@@ -60,21 +60,21 @@ export default function Header() {
       <nav className="space-x-6 flex">
         <div className="hidden md:flex items-center gap-6">
           <div className="flex items-center gap-4">
-            <Link href="/sobre" className="navBarLink">
+            <Link href="/Sobre" className="navBarLink">
               <Info size={16} /> Sobre nós
             </Link>
             <span className="py-4 w-[0.4px] bg-white"></span>
-            <Link href="/contato" className="navBarLink">
+            <Link href="/Contato" className="navBarLink">
               <Phone size={16} /> Contato
             </Link>
             <span className="py-4 w-[0.4px] bg-white"></span>
-            <Link href="/dashboard" className="navBarLink">
+            <Link href="/Dashboard" className="navBarLink">
               <LayoutDashboard size={16} /> Dashboard
             </Link>
             <span className="py-4 w-[0.4px] bg-white"></span>
           </div>
           <Link
-            href="/profile"
+            href="/Profile"
             className="text-white border-2 border-yellow-500 duration-150 transition-all ease-in-out bg-black hover:scale-105 hover:bg-yellow-800 rounded-full font-medium flex p-2 items-center gap-1"
           >
             <UserIcon strokeWidth={2} height={24} width={24} />

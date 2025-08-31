@@ -8,7 +8,7 @@ export default function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
-
+  
   if (!mounted) return null;
   return (
     <button
@@ -16,13 +16,13 @@ export default function ThemeToggle() {
         setTheme(theme === 'dark' ? 'light' : 'dark');
       }}
       className={`
-        px-2 text-sm rounded-md font-medium 
+        px-2 text-sm cursor-pointer rounded-md font-medium 
         transition-all duration-300 ease-in-out
-        transform active:scale-95
+        transform active:scale-95 bg-gradient-to-r
         ${
           theme === 'dark'
-            ? 'bg-slate-800 hover:bg-slate-700 text-white border border-slate-600'
-            : 'bg-white hover:bg-gray-50 text-gray-800 border border-gray-200'
+            ? 'from-blue-500 to-white hover:bg-black text-black'
+            : 'from-blue-700 to-gray-800 hover:bg-gray-50 text-white'
         }
         shadow-sm hover:shadow-md
       `}

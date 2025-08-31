@@ -27,7 +27,7 @@ export function Providers({ children }: { children: ReactNode }) {
         attribute="class"
         defaultTheme="light"
         enableSystem={false}
-        disableTransitionOnChange={false}
+        disableTransitionOnChange={true}
       >
         <ThemeContent>{children}</ThemeContent>
       </ThemeProvider>

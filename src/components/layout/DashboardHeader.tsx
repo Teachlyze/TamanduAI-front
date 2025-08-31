@@ -57,7 +57,7 @@ export default function DashboardHeader() {
               <li className="w-[90%] mx-auto">
                 <Link
                   className="flex justify-between border-b border-gray-600 p-2"
-                  href="/dashboard"
+                  href="/Dashboard"
                 >
                   Dashboard
                   <Columns3Cog className="inline mr-2" />
@@ -66,7 +66,7 @@ export default function DashboardHeader() {
               <li className="w-[90%] mx-auto">
                 <Link
                   className="flex justify-between border-b border-gray-600 p-2"
-                  href="/dashboard/profile"
+                  href="/Dashboard/Profile"
                 >
                   Perfil
                   <UserIcon className="inline mr-2" />
@@ -75,7 +75,7 @@ export default function DashboardHeader() {
               <li className="w-[90%] mx-auto">
                 <Link
                   className="flex justify-between border-b border-gray-600 p-2"
-                  href="/dashboard/settings"
+                  href="/Dashboard/Settings"
                 >
                   Configurações
                   <UserRoundCog className="inline mr-2" />
@@ -84,7 +84,7 @@ export default function DashboardHeader() {
               <li className="w-[90%] mx-auto">
                 <Link
                   className="flex justify-between border-b border-gray-600 p-2"
-                  href="/dashboard/school"
+                  href="/Dashboard/School"
                 >
                   Escola
                   <School className="inline mr-2" />
@@ -93,7 +93,7 @@ export default function DashboardHeader() {
               <li className="w-[90%] mx-auto">
                 <Link
                   className="flex justify-between border-b border-gray-600 p-2"
-                  href="/dashboard/contact"
+                  href="/Dashboard/Contact"
                 >
                   Contato
                   <Phone className="inline mr-2" />
@@ -102,17 +102,14 @@ export default function DashboardHeader() {
               <li className="w-[90%] mx-auto">
                 <Link
                   className="flex justify-between border-b border-gray-600 p-2"
-                  href="/dashboard/about"
+                  href="/Dashboard/About"
                 >
                   Sobre
                   <Info className="inline mr-2" />
                 </Link>
               </li>
               <li className="w-[90%] mx-auto">
-                <Link
-                  className="flex justify-between text-red-600 p-2"
-                  href="/dashboard/delete-account"
-                >
+                <Link className="flex justify-between text-red-600 p-2" href="/Dashboard/Delete">
                   Deletar conta
                   <Trash2 className="inline mr-2" />
                 </Link>
