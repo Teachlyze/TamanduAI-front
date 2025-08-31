@@ -126,15 +126,24 @@
   flex-direction: row;
 }
 
-.title {
-  @apply text-3xl md:text-4xl;
+.title,
+h1 {
+  @apply text-xl md:text-2xl;
 }
 
-.subtitle {
-  @apply text-2xl md:text-3xl;
+.subtitle,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-lg md:text-xl;
 }
 
-.text {
+.text,
+span,
+button,
+p {
   @apply text-base md:text-lg;
 }
 
@@ -169,7 +178,111 @@
     opacity: 0.4;
   }
 }
+.dashboardCardBackground {
+  @apply dark:bg-white bg-black/80 text-white dark:text-black;
+}
+
+.dashboardListBackground {
+  @apply dark:bg-black/80 bg-white text-black dark:text-white;
+}
+
+.addButton {
+  @apply flex items-center gap-2 text-sm! border-none bg-green-600 hover:bg-green-700 text-white p-2 px-4 rounded-sm transition-colors;
+}
+
+.navBarLink {
+  @apply text-white duration-200 transition-all ease-in-out hover:text-black hover:bg-yellow-400 rounded-lg font-medium flex px-2 py-1 items-center gap-1;
+}
+
+body {
+  transition: background-color 2s ease-in-out;
+}
+
+/* Animações personalizadas */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.02);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Classes de utilidade para animações */
+.animate-pulse-slow {
+  animation: pulse-slow 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.bg-gradient-animate {
+  background-size: 200% 200%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Melhorias de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 .shadow-animate {
   animation: shadowPulse 1.4s linear infinite;
+}
+
+::-webkit-scrollbar {
+  background-color: #ffffff;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #414040;
+  border-radius: 8px;
+}
+
+/* Apenas para o elemento com a classe .meu-scroll */
+.meu-scroll::-webkit-scrollbar {
+  width: 8px; /* largura da barra */
+}
+
+.meu-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1; /* cor do fundo da trilha */
+  border-radius: 8px;
+}
+
+.meu-scroll::-webkit-scrollbar-thumb {
+  background: #3b82f6; /* cor do scroll */
+  border-radius: 8px;
+}
+
+.meu-scroll::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8; /* cor quando passa o mouse */
 }
