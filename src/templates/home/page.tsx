@@ -1,25 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import Image from 'next/image';
-import {
-  AlarmClockPlus,
-  BookCheck,
-  BookHeadphones,
-  Bot,
-  BotMessageSquare,
-  ChartColumn,
-  ChartNoAxesCombined,
-  ClockPlus,
-  GraduationCap,
-  ListChecks,
-  Rocket,
-  ScrollText,
-  Star,
-  Stars,
-} from 'lucide-react';
-import Link from 'next/link';
+import { Bot, ChartNoAxesCombined, ClockPlus, ListChecks, Stars } from 'lucide-react';
 
 export default function HomePageTemplate() {
   const resources = [
