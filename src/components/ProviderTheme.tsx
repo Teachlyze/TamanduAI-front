@@ -1,11 +1,10 @@
 'use client';
 
-import { ThemeProvider, useTheme } from 'next-themes';
+import { ThemeProvider } from 'next-themes';
 import { ReactNode, Suspense, useEffect, useState } from 'react';
 
 // Wrapper que só renderiza após o client montar
 function ThemeContent({ children }: { children: ReactNode }) {
-  const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => setMounted(true), []);
@@ -13,7 +12,7 @@ function ThemeContent({ children }: { children: ReactNode }) {
 
   return (
     <div
-      className={`min-h-screen antialiased ${theme === 'light' ? 'light' : 'dark'} bg-white dark:bg-black/10`}
+      className={`min-h-screen antialiased bg-slate-200 dark:bg-black/10`}
     >
       {children}
     </div>
@@ -25,8 +24,8 @@ export function Providers({ children }: { children: ReactNode }) {
     <Suspense fallback={false}>
       <ThemeProvider
         attribute="class"
-        defaultTheme="light"
-        enableSystem={false}
+        defaultTheme="system"
+        enableSystem
         disableTransitionOnChange={true}
       >
         <ThemeContent>{children}</ThemeContent>

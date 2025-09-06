@@ -9,11 +9,11 @@ export default function Home() {
       <Main
         props="
     flex flex-col items-center
-    min-h-screen bg-blue-200"
+    min-h-screen"
       >
         <HomePageTemplate />
       </Main>
-      <Footer prop="bg-gradient-to-br from-blue-400 to-blue-800" />
+      <Footer prop="bg-black" />
     </>
   );
 }

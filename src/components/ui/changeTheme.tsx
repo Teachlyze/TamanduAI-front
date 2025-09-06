@@ -1,20 +1,30 @@
 'use client';
 
-import { useTheme } from 'next-themes';
 import { useState, useEffect } from 'react';
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const [theme, setTheme] = useState('light');
 
-  useEffect(() => setMounted(true), []);
-  
-  if (!mounted) return null;
+  useEffect(() => {
+    // pega do localStorage ou sistema
+    const stored = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initial = stored || (prefersDark ? 'dark' : 'light');
+
+    setTheme(initial);
+    document.documentElement.classList.toggle('dark', initial === 'dark');
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    localStorage.setItem('theme', newTheme);
+  };
+
   return (
     <button
-      onClick={() => {
-        setTheme(theme === 'dark' ? 'light' : 'dark');
-      }}
+      onClick={toggleTheme}
       className={`
         px-2 text-sm cursor-pointer rounded-md font-medium 
         transition-all duration-300 ease-in-out

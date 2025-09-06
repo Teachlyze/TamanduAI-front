@@ -19,7 +19,7 @@ export default function RootLayout({
       <DashboardHeader />
       <Main
         props="flex flex-col items-center
-    min-h-screen mx-auto w-full max-w-7xl mt-1"
+    min-h-screen w-full mt-1"
       >
         {children}
       </Main>

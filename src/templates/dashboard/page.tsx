@@ -54,7 +54,7 @@ export default function DashboardTemplate() {
     { title: 'Eventos', value: 2, icon: <Tickets />, color: 'text-red-600' },
   ];
   return (
-    <section className="flex w-full px-2 mt-4 text-black dark:text-white">
+    <section className="flex w-full px-2 mt-4">
       <section className="grid grid-cols-4 max-lg:grid-cols-1 p-1 space-y-6 md:gap-6 w-full ">
         <div className="col-span-3 rounded-lg">
           <div>
@@ -104,9 +104,7 @@ export default function DashboardTemplate() {
                         {subject.status}
                       </span>
                     </div>
-                    <p className="text-base!  font-medium">
-                      Escola municipal do 9-3/4
-                    </p>
+                    <p className="text-base!  font-medium">Escola municipal do 9-3/4</p>
                   </div>
                   <div>
                     <div className="flex items-center gap-1 ">
